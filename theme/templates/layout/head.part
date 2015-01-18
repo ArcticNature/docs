@@ -1,4 +1,5 @@
 <head>
-  <title>{{title}}</title>
-  {{!-- TODO(stefano): add style --}}
+  <title>{{page-title}}</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>

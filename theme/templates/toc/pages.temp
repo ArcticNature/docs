@@ -1,6 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   {{> layout-head}}
   <body>
-    Table of content for pages
+    {{> layout-menu}}
+    <div class="container-fluid">
+
+      <h1 class="page-header">
+        Table of Content
+        <small>List of pages</small>
+      </h1>
+
+      <ul>
+        {{#each pages}}
+          <li><a href="{{id}}.html">{{title}}</a></li>
+        {{/each}}
+      </ul>
+
+    </div>
+    {{> layout-end}}
   </body>
 </html>

@@ -20,9 +20,13 @@ module.exports = function(grunt) {
     var results = [];
 
     for (var idx = 0; idx < pages.length; idx++) {
-      parser.open(doxy_source, pages[idx].id + ".xml");
+      var file = pages[idx].id === "index" ? "indexpage" : pages[idx].id;
+      parser.open(doxy_source, file + ".xml");
       var page = parser.parseAsPage();
-      if (toc) { page.toc = toc; }
+      if (toc) {
+        tocSetAttributeForId(toc.pages, pages[idx].id, "title", page.title);
+        page.toc = shallowCopy(toc, { "toc-active-page": page.id });
+      }
 
       results.push(page);
       destinations.push(name(pages[idx])); 
@@ -32,6 +36,30 @@ module.exports = function(grunt) {
       dest: destinations,
       type: "multi-raw"
     };
+  };
+
+  /*!
+   * Creates a shallow (one level only) copy of an object
+   * and optionally extends it this data from another object.
+   * @param {!Object} source The object to copy.
+   * @param {Object}  extend The object to use for extension.
+   */
+  var shallowCopy = function shallowCopy(source, extend) {
+    var result = {};
+    extend     = extend || {};
+
+    // Copy the fist level of source in a new dictionary.
+    for (var key in source) {
+      if (!source.hasOwnProperty(key)) { conitnue; }
+      result[key] = source[key];
+    }
+
+    // Override the given keys.
+    for (var key in extend) {
+      if (!extend.hasOwnProperty(key)) { conitnue; }
+      result[key] = extend[key];
+    }
+    return result;
   };
 
   /*!
@@ -52,23 +80,43 @@ module.exports = function(grunt) {
           title: page.title
         });
 
-        if (page.id === "indexpage") {
+        if (page.id === "index") {
           toc.index = page.title;
         }
       }
-
-      toc.pages = toc.pages.sort(function(left, right) {
-        if (left.title < right.title) {
-          return -1;
-        } else if (left.title == right.title) {
-          return 0;
-        } else {
-          return 1;
-        }
-      });
     }
 
     return toc;
+  };
+
+  /*!
+   * Post processes the table of content object.
+   */
+  var tocPostProcess = function tocPostProcess(toc) {
+    toc.pages = toc.pages.sort(function(left, right) {
+      if (left.title < right.title) {
+        return -1;
+      } else if (left.title == right.title) {
+        return 0;
+      } else {
+        return 1;
+      }
+    });
+    return toc;
+  };
+
+  /*!
+   * Sets an attribute for the item matching the given id.
+   */
+  var tocSetAttributeForId = function tocSetAttributeForId(
+      items, id, key, value
+  ) {
+    for (var idx=0; idx < items.length; idx++) {
+      if (items[idx].id === id) {
+        items[idx][key] = value;
+        return;
+      }
+    }
   };
 
 
@@ -121,9 +169,13 @@ module.exports = function(grunt) {
     data["page"] = parsePages(doxy_source, manifest, parser, namer, toc);
 
     if (options.toc) {
+      toc = tocPostProcess(toc);
       data["toc-pages"] = {
-        data: toc,
-        dest: path.join(doxy_dest, "toc", "pages.html"),
+        data: shallowCopy(toc, {
+          title: "All pages | Table of Contents",
+          "toc-active-page": "toc-pages"
+        }),
+        dest: path.join(doxy_dest, "toc-pages.html"),
         type: "raw"
       }
     }

@@ -50,7 +50,7 @@ XmlParser.prototype.parseAsManifest = function parseAsManifest() {
       attributes      = attributesArrayToObject(attributes);
       current_mode    = "compound";
       current_compund = {
-        id:      attributes.refid,
+        id:      attributes.refid === "indexpage" ? "index" : attributes.refid,
         kind:    attributes.kind,
         members: []
       };
@@ -108,14 +108,13 @@ XmlParser.prototype.parseAsPage = function parseAsPage() {
   };
 
   var checkAndPushText = function checkAndPushText() {
-    current_buffer = current_buffer.trim();
-    if (current_buffer !== "") {
+    if (current_buffer.trim() !== "") {
       stack[stack.length - 1]["$elements"].push({
         "$tag": "text",
         "$text": current_buffer
       });
-      current_buffer = "";
     }
+    current_buffer = "";
   };
 
   // Set of tags to process in descriptions.
@@ -123,7 +122,8 @@ XmlParser.prototype.parseAsPage = function parseAsPage() {
     "listitem":     true,
     "itemizedlist": true,
     "heading":      true,
-    "para":         true
+    "para":         true,
+    "ref":          true
   }
 
   // Create the XML Parser & bind events.
