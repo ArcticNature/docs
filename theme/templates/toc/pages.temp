@@ -1,6 +1,6 @@
 <html>
   {{> layout-head}}
   <body>
-    Page content
+    Table of content for pages
   </body>
 </html>
