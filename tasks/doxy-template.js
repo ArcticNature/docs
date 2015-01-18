@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+  var path = require("path");
+
   var XmlParser = require("./xml-parser");
 
 
@@ -7,16 +9,23 @@ module.exports = function(grunt) {
    * @param {!String}    doxy_source Base path for doxygen files.
    * @param {!Object}    manifest    The parsed index.xml.
    * @param {!XmlParser} parser      The parser instance already created.
+   * @param {!Function}  name        Build the output file name of a page.
    */
-  var parsePages = function parsePages(doxy_source, manifest, parser) {
+  var parsePages = function parsePages(doxy_source, manifest, parser, name) {
+    var destinations = [];
     var pages   = manifest["page"];
     var results = [];
 
     for (var idx = 0; idx < pages.length; idx++) {
       parser.open(doxy_source, pages[idx].id + ".xml");
       results.push(parser.parseAsPage());
+      destinations.push(name(pages[idx])); 
     }
-    return results;
+    return {
+      data: results,
+      dest: destinations,
+      type: "multi-raw"
+    };
   };
 
 
@@ -36,10 +45,10 @@ module.exports = function(grunt) {
       );
     }
 
+    var doxy_dest   = this.files[0].dest;
     var doxy_source = this.files[0].src[0];
-    var options     = this.options({
-      //
-    });
+    //var options     = this.options({
+    //});
 
     if (!grunt.file.isDir(doxy_source)) {
       grunt.fail.warn(
@@ -49,6 +58,10 @@ module.exports = function(grunt) {
       );
     }
 
+    var namer = function namer(item) {
+      return path.join(doxy_dest, item.id + ".html");
+    };
+
     // Read index.xml in memory.
     var data     = {};
     var manifest = {};
@@ -57,10 +70,11 @@ module.exports = function(grunt) {
     manifest = parser.parseAsManifest();
 
     // Process manifest.
-    data["page"] = parsePages(doxy_source, manifest, parser);
+    data["page"]    = parsePages(doxy_source, manifest, parser, namer);
 
     // Expand results.
-    console.log(JSON.stringify(data["page"], null, 2));
+    grunt.config("handlebars-expand.docs", data);
+    grunt.task.run("handlebars-expand:docs");
   });
 };
 

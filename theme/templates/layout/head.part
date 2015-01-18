@@ -1,0 +1,4 @@
+<head>
+  <title>{{title}}</title>
+  {{!-- TODO(stefano): add style --}}
+</head>
