@@ -1,27 +1,27 @@
 var Handlebars = require("handlebars");
 
+var convertToTag = function convertToTag(tag, optimise) {
+  // Optimise out paragraphs immediatelly under a list item.
+  var elements  = node["$elements"];
+  var tag_close = "</" + tag + ">";
+  var tag_open  = "<" + tag + ">";
+  if (optimise && elements.length === 1 && elements[0]["$tag"] === "para") {
+    return tag_open + formatDoxyTree(elements[0]["$elements"]) + tag_close;
+  }
+  return tag_open + formatDoxyTree(elements) + tag_close;
+};
+
 var TAG_HANDLERS = {
-  itemizedlist: function(node) {
-    return "<ul>" + formatDoxyTree(node["$elements"]) + "</ul>";
-  },
+  bold:         convertToTag("b", true),
+  itemizedlist: convertToTag("ul"),
+  listitem:     convertToTag("li", true),
+  para:         convertToTag("p"),
+  verbatim:     convertToTag("pre"),
 
   heading: function(node) {
     var tag    = "h" + node.level;
     var output = "<" + tag + ">" + formatDoxyTree(node["$elements"]);
     return output + "</" + tag + ">";
-  },
-
-  listitem: function(node) {
-    // Optimise out paragraphs immediatelly under a list item.
-    var elements = node["$elements"];
-    if (elements.length === 1 && elements[0]["$tag"] === "para") {
-      return "<li>" + formatDoxyTree(elements[0]["$elements"]) + "</li>";
-    }
-    return "<li>" + formatDoxyTree(elements) + "</li>";
-  },
-
-  para: function(node) {
-    return "<p>" + formatDoxyTree(node["$elements"]) + "</p>";
   },
 
   ref: function(node) {

@@ -119,11 +119,13 @@ XmlParser.prototype.parseAsPage = function parseAsPage() {
 
   // Set of tags to process in descriptions.
   var TAGS_TO_STACK = {
+    "bold":         true,
     "listitem":     true,
     "itemizedlist": true,
     "heading":      true,
     "para":         true,
-    "ref":          true
+    "ref":          true,
+    "verbatim":     true
   }
 
   // Create the XML Parser & bind events.
