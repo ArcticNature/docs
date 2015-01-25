@@ -74,7 +74,6 @@ Several features are being developed and many others are planned.
 This is a short, non exhaustive, list of features that I plan to
 work on/release next.
 
-  * Services list and status.
   * File, Syslog and FluentD logging.
   * Configuration hot reload.
   * Web front end.
