@@ -1,4 +1,4 @@
-System Overview {#system-overview}
+System Overview
 ===============
 GreenTorch is designed to be an easily extensible and flexible system
 to help technical people run internal and production software.
@@ -66,4 +66,7 @@ managing and loading the configuration.
 Configuration files are written in [LUA](http://www.lua.org/) and
 the manager provides additional commands depending on the
 type of configuration being loaded (e.g: system, service).
+
+### Visualise components
+\image html images/overview.svg "Components overview" width=full-center
 

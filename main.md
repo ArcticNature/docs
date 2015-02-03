@@ -1,9 +1,9 @@
 Green Torch
 ===========
-### Work in progress notice
-Warning! This project is in very early stages.
-No feature is currently complete and several things
-are going to change.
+
+    Warning! This project is in very early stages.
+    No feature is currently complete and several things
+    are going to change.
 
 
 Why?
@@ -58,13 +58,13 @@ Getting started
 ---------------
 Before you begin to spawn processes there are a few concepts to understand.
 They are not many and they are explained in the
-[System Overview](@ref system-overview) page.
+[System Overview](overview.md) page.
 
 As of right now Green Torch needs to be compiled from sources.
 This is not difficult and is explained in
-[Compiling the sources](@ref compile-how-to).
+[Compiling the sources](compile.md).
 
-Once you read the above you can move on to [First steps](@ref first-steps)
+Once you read the above you can move on to [First steps](first-steps.md)
 and start to discover the system.
 
 

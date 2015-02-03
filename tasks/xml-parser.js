@@ -121,10 +121,12 @@ XmlParser.prototype.parseAsPage = function parseAsPage() {
   var TAGS_TO_STACK = {
     "bold":         true,
     "listitem":     true,
+    "image":        true,
     "itemizedlist": true,
     "heading":      true,
     "para":         true,
     "ref":          true,
+    "ulink":        true,
     "verbatim":     true
   }
 

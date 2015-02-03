@@ -1,4 +1,4 @@
-First steps {#first-steps}
+First steps
 ===========
 TODO
 

@@ -12,7 +12,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1683.74"
-   height="2717.8936"
+   height="2209.322"
    id="svg2985"
    version="1.1"
    inkscape:version="0.48.5 r10040"
@@ -24,9 +24,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="0"
-     inkscape:zoom="0.175"
-     inkscape:cx="1153.5046"
-     inkscape:cy="1267.5916"
+     inkscape:zoom="0.35"
+     inkscape:cx="-108.67833"
+     inkscape:cy="577.0141"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -532,7 +532,7 @@
      transform="translate(764.08651,939.82715)">
     <g
        id="g3001-2"
-       transform="translate(795.31067,1271.974)">
+       transform="translate(795.31067,763.40257)">
       <path
          transform="matrix(0.7552285,0,0,1.0686,-262.19461,11.168526)"
          d="m -257.14285,3.7907541 c 0,91.5214689 -182.28407,165.7142759 -407.14286,165.7142759 -224.85878,0 -407.14289,-74.192807 -407.14289,-165.7142759 0,-91.5214691 182.28411,-165.7142841 407.14289,-165.7142841 224.85879,0 407.14286,74.192815 407.14286,165.7142841 z"
@@ -562,14 +562,14 @@
            sodipodi:role="line">Run Loop</tspan></text>
     </g>
     <path
-       style="fill:none;stroke:#ff1200;stroke-width:4.85300016;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1MstartX);marker-mid:none;marker-end:url(#InfiniteLineEndj)"
-       d="m 165.23302,-191.26261 -3.14433,758.96602"
+       style="fill:none;stroke:#ff1200;stroke-width:2.92128134;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1MstartX);marker-mid:none;marker-end:url(#InfiniteLineEndj)"
+       d="M 165.23302,-191.26261 162.08869,83.747384"
        id="path3047"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#0e31ff;stroke-width:4.87350607;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1MstartX9);marker-mid:none;marker-end:url(#InfiniteLineEndjb)"
-       d="m -117.26349,619.80158 3.14433,-765.39341"
+       style="fill:none;stroke:#0e31ff;stroke-width:2.84861946;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1MstartX9);marker-mid:none;marker-end:url(#InfiniteLineEndjb)"
+       d="m -117.26349,115.9075 3.14433,-261.49933"
        id="path3047-9"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
@@ -701,7 +701,7 @@
        id="g7626" />
     <g
        id="g7648"
-       transform="translate(387.8986,1565.7365)">
+       transform="translate(387.8986,1057.1651)">
       <g
          id="g7726">
         <rect
@@ -859,25 +859,25 @@
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:4.98248672;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#marker7565);marker-end:url(#Arrow1Mend)"
-       d="m 25.991258,883.23091 4.765019,220.98269"
+       d="m 25.991258,374.65948 4.765019,220.98269"
        id="path7777"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:5.0853138;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#marker7565);marker-end:url(#Arrow1Mend);display:inline"
-       d="M 480.72199,878.6578 246.58784,1149.295"
+       d="M 480.72199,370.08637 246.58784,640.72357"
        id="path7777-6"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#marker7565);marker-end:url(#Arrow1Mend);display:inline"
-       d="M -185.86807,1151.3571 -412.14224,880.63627"
+       d="M -185.86807,642.78567 -412.14224,372.06484"
        id="path7777-6-2"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <g
        id="g4468"
-       transform="translate(1212.1831,-153.54319)">
+       transform="translate(1212.1831,-662.11462)">
       <path
          inkscape:connector-curvature="0"
          id="path3250"
@@ -899,14 +899,14 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:100%;letter-spacing:1.22000003px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1011.5994"
+       x="503.02798"
        y="672.67712"
        id="text4574"
        sodipodi:linespacing="100%"
        transform="matrix(0,1,-1,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan4576"
-         x="1011.5994"
+         x="503.02798"
          y="672.67712"
          style="font-size:144px">Manager</tspan></text>
   </g>

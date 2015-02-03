@@ -25,7 +25,9 @@ module.exports = function(grunt) {
       var page = parser.parseAsPage();
       if (toc) {
         tocSetAttributeForId(toc.pages, pages[idx].id, "title", page.title);
-        page.toc = shallowCopy(toc, { "toc-active-page": page.id });
+        page.toc = shallowCopy(toc, {
+          "toc-active-page": page.id === "indexpage" ? "index" : page.id
+        });
       }
 
       results.push(page);
