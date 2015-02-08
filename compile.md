@@ -48,7 +48,7 @@ code or generate other resources, such as documentations.
 Many people used to C/C++ projects will see the similarity with make files.
 
 The git repository comes with a top leve Grunt file that collects tasks to
-compile all the services that compose GreenTorch.
+compile all the services that compose SnowFox.
 
 To see al the availabe tasks you can run `grunt --help`.
 To compile the projects in release mode simply run `grunt`.
