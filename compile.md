@@ -1,6 +1,6 @@
 Compiling the sources
 =====================
-As mention in the [Project Overiview](main.md) Greentorch is a software
+As mention in the [Project Overiview](main.md) SnowFox is a software
 fromed of different projects built with different technologies.
 
 
@@ -21,7 +21,7 @@ The following framework and libraries are required to run the services:
 
 Additional required Node.JS modules are listed in:
 
-  * green-torch-json/package.json
+  * snow-fox-json/package.json
 
 
 Compile-time dependencies
@@ -62,7 +62,7 @@ Quick reference
 ---------------
 
     git clone ???
-    cd green-torch
+    cd snow-fox
     npm install
     grunt debug
 

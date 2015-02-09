@@ -65,7 +65,7 @@ That should result in the following being printed on the daemon condole:
       },
       "version": {
         "build-date": "2015-02-08 18:58:01",
-        "clotd": "0.0.0-415a7ed",
+        "snow-fox-daemon": "0.0.0-415a7ed",
         "config": "not-applicable"
       }
     }

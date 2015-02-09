@@ -1,6 +1,6 @@
 System Overview
 ===============
-GreenTorch is designed to be an easily extensible and flexible system
+SnowFox is designed to be an easily extensible and flexible system
 to help technical people run internal and production software.
 
 This document presents an overview of the system and its components
@@ -11,11 +11,11 @@ works!
 Components and events
 ---------------------
 The full system is composed by several programs:
-  * green-torch-daemon
-  * green-torch-json
-  * green-torch-web
+  * snow-fox-daemon
+  * snow-fox-json
+  * snow-fox-web
 
-The C++ daemon is the core of GreenTorch, spawning processes and
+The C++ daemon is the core of SnowFox, spawning processes and
 managing services it is controlled through a TCP connection.
 
 The protocol to control the daemon is meant to be machine efficient
@@ -66,7 +66,4 @@ managing and loading the configuration.
 Configuration files are written in [LUA](http://www.lua.org/) and
 the manager provides additional commands depending on the
 type of configuration being loaded (e.g: system, service).
-
-### Visualise components
-\image html images/overview.svg "Components overview" width=full-center
 
