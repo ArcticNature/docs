@@ -1,3 +1,3 @@
 module.exports = function title() {
-  return this.title || "Green Torch documentation";
+  return this.title || "SnowFox documentation";
 };
