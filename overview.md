@@ -8,6 +8,7 @@ both from a user and a development prospective.
 Knowing how a system is implemented allows understating of how it
 works!
 
+
 Components and events
 ---------------------
 The full system is composed by several programs:
@@ -15,8 +16,8 @@ The full system is composed by several programs:
   * snow-fox-json
   * snow-fox-web
 
-The C++ daemon is the core of SnowFox, spawning processes and
-managing services it is controlled through a TCP connection.
+The C++ daemon is the core of SnowFox, spawning processes and managing services.
+It is controlled by messages sent through a TCP connection.
 
 The protocol to control the daemon is meant to be machine efficient
 more than user friendly, which is why a Node.JS server offers a JSON
@@ -27,12 +28,17 @@ daemons as well as easier backward compatibility.
 On top of the JSON API there will be an HTML application that will
 make it easy to access all the offered features.
 
+
 Structure of the Daemon
 -----------------------
 In an attempt to keep the complexity of the daemon in check and its
-extensibility easy it is internally divided into multiple components.
+extensibility easy it is divided into multiple components.
 This section will provide an overview of how the daemon works and
 what its components are.
+
+More information on the development of the project and organisation of
+the code is available in the [Readme.md](Readme.md) file in the root
+of the repository.
 
 The first thing to understand is that the daemon is event driven.
 The other key aspect is that the majority of the code does not
@@ -45,7 +51,7 @@ will drop privileges.
 The root process is responsible for performing the privileged actions.
 
 It keeps almost no state by itself and uses a bi-directional pipe
-to exchange messages with the manager process (the unprivileged child).
+to exchange messages with the manager process (the forked process).
 
 The spawner uses connectors to handle messages from the manager.
 Based on what connectors are enabled/compiled in the Spawner the system
@@ -57,11 +63,11 @@ track of the state of the system.
 
 The core of the manager is the event manager, which manages a set of
 event sources and triggers events.
-The run loop waits for the event manager to trigger anything and
+The run loop waits for the event manager to trigger something and
 starts the handling of the triggered events.
 
 Beside the event related components and a few others (internal things
-such as logging and state), the manager is also responsible for
+such as logging and state), the manager process is also responsible for
 managing and loading the configuration.
 Configuration files are written in [LUA](http://www.lua.org/) and
 the manager provides additional commands depending on the

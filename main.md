@@ -1,10 +1,9 @@
 Snow Fox
 ========
 
-    Warning! This project is in very early stages.
-    No feature is currently complete and several things
-    are going to change.
-
+    >! Warning! This project is in very early stages.
+    >! No feature is currently complete and several things
+    >! are going to change.
 
 Managing an infrastructure is a complex task even when
 few machines are involved.
@@ -104,10 +103,9 @@ Several features are being developed and many others are planned.
 This is a short, non exhaustive, list of features that I plan to
 work on next.
 
+  * Define strict messages format, JSON API still offered by Node.JS server.
   * File, Syslog and FluentD logging.
   * Configuration hot reload.
   * Web front end.
   * StatD integration.
-  * Define strict messages format, JSON API still offered by Node.JS server.
   * Monitor daemons and other externally started processes.
-

@@ -41,14 +41,16 @@ It is possible to run SnowFox in console mode, which is helpful to see
 what is going on with the system and to quickly stop it.
 
 Assuming that the default-repo directory from the source code is found
-in `/tmp/snow-fox-repo/` the following command will start the core server:
+in `/tmp/snow-fox-repo/` the following command will start the daemon:
 
     snow-fox-daenon --nodaemonise --dir --repo_path=/tmp/snow-fox-repo
 
-Regardless of the configuration the daemon will handle the following signals:
-  * INIT and TERM: stops the daemon and cleanly exits.
+Regardless of the configuration provided the daemon will handle the
+following signals:
+  * INT: stops the daemon and cleanly exits, except when compiled in debug mode.
+  * TERM: stops the daemon and cleanly exits.
   * USR1: prints the current state of the system to the console.
-  * USR2: reloads the configuration for the deamon without restarting.
+  * USR2: reloads the configuration for the daemon without restarting.
 
 Before moving on check the state of the daemon:
 
@@ -70,7 +72,7 @@ That should result in the following being printed on the daemon condole:
       }
     }
 
-Once you verified that the deamon is up and running you can send more commands
+Once you verified that the daemon is up and running you can send more commands
 through other interfaces (as of now only a TCP interface is available).
 With this default configuration SnowFox excepts commands over a TCP channel
 and you should see a line similar to the following on your console:
@@ -113,11 +115,16 @@ This identifier relates to the path within the repository as follows:
      Once a file is located and loaded the original identifier is used
      when performing any action on the service.
 
-For the example above you can start another instance of the
-JSON API server on port 1504 by browsing
+For the example above you can attempt to start another instance of the
+JSON API server by browsing
 `http://localhost:2033/api/service/infra.snow-fox.json/start`.
 After which `http://localhost:2033/api/service/infra.snow-fox.json` can
 be visited to see the current state of the service.
+
+  >! To reiterate, the software is a work in progress.
+  >! In particular instance states are not tracked yet so all instances
+  >! shown in this list will have state -1, even if they were terminated
+  >! or failed to start.
 
 
 What to do next
@@ -126,4 +133,3 @@ Now it is time to experiment with the system and adapt it to your needs.
 As the project is in its very early stages there is not much more to do
 than defining new services but you can always look out for new features
 and many, *many*, stability improvements.
-
