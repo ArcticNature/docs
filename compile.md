@@ -29,6 +29,7 @@ Compile-time dependencies
 -------------------------
 
   * GCC with support for C++11.
+  * Google protocol buffers compiler and C++ headers.
   * grunt-cli
   * Lua 5.2 development headers.
   * npm
