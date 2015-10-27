@@ -1,0 +1,24 @@
+{
+   "baseurl": "http://stefano-pogliani.github.io/snow-fox-pages/",
+   "languageCode": "en-us",
+
+   "canonifyurls": false,
+
+   "title": "SnowFox",
+   "copyright": "Copyright (c) 2015, Stefano Pogliani",
+
+   "contentdir": "content",
+   "publishdir": "../out/dist/release/docs",
+   "theme": "bootie-docs",
+
+   "params": {
+     "AuthorName": "Stefano Pogliani",
+     "description": "Use, configure and contribute to SnowFox, your personal process guardian.",
+
+     "mainMenu": [
+       "features", "install", "guides",
+       "references", "roadmap"
+     ],
+     "noCategoryLink": true
+   }
+}

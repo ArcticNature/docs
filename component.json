@@ -1,0 +1,16 @@
+{
+  "name": "docs",
+  "type": "scripts",
+
+  "analysis":   "no_analise",
+  "clear-path": "out/dist/release/docs",
+
+  "scripts": {
+    "build":  "docs/build/build-hugo",
+    "no_analise": "echo Analysis of documentation not implemented."
+  },
+
+  "targets": {
+    "release": { "tasks": "build" }
+  }
+}
