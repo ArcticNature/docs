@@ -18,20 +18,6 @@ fundation work but once that is out of the way many cool features will make
 their way into it.
 
 
-Distribution task
------------------
-The release task takes care of producing items that run the system but
-not in an easy to deliver format.
-Package the daemon and zip the docs in convenient formats to deploy.
-
-
-Git Repository
---------------
-The current version only has a fake repository supported for development
-reasons.
-Implement the git based repository component to allow release builds to start.
-
-
 Example server with netcat
 --------------------------
 The default configuration repository could do with a little more examples.
