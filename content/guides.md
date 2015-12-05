@@ -11,3 +11,5 @@ Beginners guides
 This section will list beginner guides to SnowFox.
 Covered topics will include core configuration options, common interactions
 with the API and simple service configuration.
+
+  * [Running a NetCat server](begin/netcat)

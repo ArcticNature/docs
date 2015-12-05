@@ -65,12 +65,10 @@ daemon to set up the environment and configure the services.
 This is still easy to read and write for simple setups but also provide a level
 of flexibility and dynamicity that complex environments need.
 
-To start with, get the default configuration and start SnowFox in console mode.
-As the `git` module is still not implemented we will use the direcotry module:
-
+To start with, get the default configuration and start SnowFox in console mode:
 ```bash
 git clone git@github.com:stefano-pogliani/snow-fox-example-config.git
-snowfox --nodaemonise --dir --repo_path=snow-fox-example-config
+snowfox --nodaemonise --git --repo_path=snow-fox-example-config
 ```
 
 After starting, SnowFox will check if any service was started in a previous
@@ -81,6 +79,8 @@ You may also notice that SnowFox is telling you something about
 "Autostarting services".
 This is a feature of SnowFox and is documented in the features
 and references pages of this site.
+In short this feature allows to ensure that some services are running
+when SnowFox starts.
 
 
 ### Senging a signal to the daemon
@@ -98,23 +98,25 @@ If all else fail, signals should still allow you to perform the following:
     This will be printed to standard output of the daemon itself.
   * `SIGUSR2` requests hot reload of the configuration (not yet implemented).
 
-For example, assuming that SnowFox as started before is still running:
 
+For example, assuming that SnowFox, as started before, is still running:
 ```bash
 SFPID=$(pgrep snow-fox | tail -n1)
 kill -USR1 ${SFPID}
 ```
 
 Will make the following appear in the SnowFox console:
-
 ```text
 SnowFox Daemon
-  Version: 0.0.0-26e33f7
-  Build on: 2015-10-18 17:38:52
-  Config revision: not-applicable
-  Running since: 2015-10-22 01:11:02
+  Version: 0.0.0-3cda9eb
+  Build on: 2015-12-01 21:58:53
+
+Configuration
+  name: <latest>
+  revision: cfbb3ac37282ad22d8452e806822180d5e25b5d6
 
 System State
+  Running since: 2015-12-01 22:02:06
   Status code: 4
   Status message: Up and running
 ```
@@ -126,7 +128,7 @@ Such API is exposed as a TCP channel for protocol buffer messages for advanced
 or committed users that have access to protocol buffer implementations.
 
 On top of the protocol buffer API the SnowFox JSON project (part of this
-repository) build a HTTP API which uses JSON to interact with the daemon.
+repository) builds an HTTP API which uses JSON to interact with the daemon.
 This API is usefull for those who do not have access to protocol buffers
 or want to prototype something quickly.
 
@@ -136,7 +138,7 @@ By default the SnowFox JSON node.js module is expected to be in
 `/opt/snow-fox/clients/json`.
 See the [installation instruction](install) for more on this.
 
-Once the JSON API are up and running you can hit the following enpoint with
+Once the JSON API are up and running you can hit the following enpoints with
 any JSON clients (your browser, extentsion, curl, wget, ...) to interact
 with the daemon:
 
@@ -146,4 +148,5 @@ with the daemon:
      Try `GET http://localhost:1840/services/infra.snow-fox.json` on the
      default configuration for example.
   * `PUT http://localhost:1840/services/infra.snow-fox.json`:
-    starts a new instacne of the JSON service.
+    starts a new instacne of the JSON servicei (which will fail to start
+    as the port is alreay in use).

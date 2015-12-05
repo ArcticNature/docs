@@ -15,14 +15,13 @@ page of the development pages.
 
 Daemon install
 --------------
-Once the sources have been compiled the daemon is ready for use as a
-standalone binary.
-For conveninece we can copy this binary to a system wide location
-such as `/opt/snow-fox/bin`:
+Once the sources are compiled with `grunt distribute`, the daemon is
+pakaged in `out/snow-fox-<commit>.tar.gz` under `snow-fox/bin/snow-fox`.
 
+For conveninece we install SnowFox to a system wide location such as
+`/opt/snow-fox`:
 ```bash
-mkdir -p /opt/snow-fox/bin
-cp out/dist/release/daemon/daemon /opt/snow-fox/bin/snow-fox
+tar --extract --directory /opt --file out/snow-fox-<commit>.tar.gz
 ```
 
 ### Runtime requirements
@@ -32,19 +31,26 @@ As of now SnowFox needs a few extra libraries to be available in the system:
   * Lua 5.2 runtime.
   * Pthreads (POSIX threads).
 
+The following libraries are required for gitlb2:
+
+  * LibCurl
+  * LibSSH2
+  * HTTP Parser
+  * OpenSSL
+
 
 JSON API
 --------
-The JSON API is provided by a node.js module that wraps the protocol buffers.
-When the sources are compiled the module is build in
-`out/dist/release/clients/json/module`.
+The JSON API is provided by a node.js module that translate to the
+protocol buffers API.
+When the sources are compiled with `grunt distribute`, the module is packaged
+in `out/snow-fox-<commit>.tar.gz` under `snow-fox/clients/json`.
+
 The following commands can be used to make the module available
 in the location expected by the default configuration repository:
-
 ```bash
-# copy the module to a system wide location.
-mkdir -p /opt/snow-fox/clients/json
-cp -rp out/dist/release/clients/json/module /opt/snow-fox/clients/json
+# Copy the module to a system wide location.
+tar --extract --directory /opt --file out/snow-fox-<commit>.tar.gz
 
 # Install NPM dependencies.
 cd /opt/snow-fox/clients/json
