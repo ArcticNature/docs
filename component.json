@@ -7,10 +7,11 @@
 
   "scripts": {
     "build":  "docs/build/build-hugo",
+    "graphs": "docs/build/graphs",
     "no_analise": "echo Analysis of documentation not implemented."
   },
 
   "targets": {
-    "release": { "tasks": "build" }
+    "release": { "tasks": ["graphs", "build"] }
   }
 }

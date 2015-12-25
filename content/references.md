@@ -25,13 +25,13 @@ Configuration reference
 The configuration system for SnowFox is based on LUA and a set of extentions
 that allow domain specific operations.
 The configuration options and directives are documented in the
-[Configuration Reference](references/configuration) page.
+[Configuration Reference](configuration) page.
 
 
 Protocol buffers reference
 --------------------------
 Interaction with the daemon is done with protocol buffers over TCP.
-The [Protocol Buffers Reference](referneces/protobuf) page describes
+The [Protocol Buffers Reference](protobuf) page describes
 the messages and how they are structured.
 
 
@@ -41,5 +41,12 @@ To semplify access to the daemon the JSON API wraps the protocol buffers
 above into an HTTP API that uses JSON to exchange data.
 Although the structure of this API is based on the protocol buffers it
 wraps, the structure of the data exposed and the methods to access it
-will be different though so consult the [JSON API Reference](references/json)
+will be different though so consult the [JSON API Reference](json)
 page.
+
+
+Event flow reference
+--------------------
+Since SnowFox is an event based system components interact with each other
+through events and features are implemented as reactions to events.
+Event flows are documented in the [Flow Reference](flows) section.

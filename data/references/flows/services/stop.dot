@@ -1,0 +1,18 @@
+digraph service_stop {
+  api_event [label="API: stop service"];
+  manager_delegate [label="Manager: delegate to instance"];
+  local_send [label="Manager: send Stop to Spawner"];
+  spawner_stopped [label="Spawner: send Stopped to Manager"];
+  manager_update [label="Manager: update state"];
+
+  // Common steps.
+  api_event -> manager_delegate;
+
+  // Local service.
+  manager_delegate -> local_send [
+    label="  Local service",
+    fontcolor="blue"
+  ];
+  local_send -> spawner_stopped;
+  spawner_stopped -> manager_update;
+}
