@@ -1,0 +1,44 @@
+#!/bin/bash
+# Hugo build script for docs.
+COMPONENT_PATH="documents"
+LOCAL_MODE="no"
+TARGET="debug"
+
+
+# Parse arguments.
+while [ "$#" -ne 0 ]; do
+  arg=$1
+  shift
+
+  case "${arg}" in
+    --local)
+      LOCAL_MODE="yes"
+      ;;
+
+    --path)
+      COMPONENT_PATH=$1
+      shift
+      ;;
+
+    --target)
+      TARGET=$1
+      shift
+      ;;
+
+    *)
+      echo "Unable to parse argument '${arg}'!"
+      exit 1
+  esac
+done
+
+
+### MAIN ###
+ARGS=""
+DEST="${PWD}/out/dist/${TARGET}/${COMPONENT_PATH}"
+
+if [ "${LOCAL_MODE}" == "yes" ]; then
+  ARGS="--watch server"
+fi
+
+cd "${COMPONENT_PATH}"
+hugo --destination "${DEST}" ${ARGS} || exit 1

@@ -3,15 +3,15 @@
   "type": "scripts",
 
   "analysis":   "no_analise",
-  "clear-path": "out/dist/release/docs",
+  "clear-path": "out/dist/<%= target %>/<%= path %>",
 
   "scripts": {
-    "build":  "docs/build/build-hugo",
-    "graphs": "docs/build/graphs",
+    "hugo":  "<%= path %>/_build/build-hugo --path '<%= path %>' --target '<%= target %>'",
+    "graphs": "<%= path %>/_build/graphs",
     "no_analise": "echo Analysis of documentation not implemented."
   },
 
   "targets": {
-    "release": { "tasks": ["graphs", "build"] }
+    "release": { "tasks": ["hugo"] }
   }
 }

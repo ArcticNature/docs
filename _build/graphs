@@ -1,0 +1,18 @@
+#!/bin/bash
+#  Render graphs written in dot files.
+
+
+DATA="docs/data"
+STATIC="docs/static"
+
+
+dot_svg() {
+  dir=$(dirname "$1")
+  name=$(basename "$1" .dot)
+
+  mkdir -p "${STATIC}/${dir}"
+  dot -Tsvg "${DATA}/$1" > "${STATIC}/${dir}/${name}.svg"
+}
+
+
+#dot_svg "references/flows/services/stop.dot"
