@@ -1,6 +1,6 @@
 {
    "baseurl": "http://stefano-pogliani.github.io/snow-fox-pages/",
-   "languageCode": "en-us",
+   "languageCode": "en-gb",
 
    "canonifyurls": false,
 
@@ -8,8 +8,7 @@
    "copyright": "Copyright (c) 2015, Stefano Pogliani",
 
    "contentdir": "content",
-   "publishdir": "../out/dist/release/docs",
-   "theme": "bootie-docs",
+   "theme": "snow-fox",
 
    "params": {
      "AuthorName": "Stefano Pogliani",

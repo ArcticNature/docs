@@ -1,0 +1,15 @@
+{
+  "name": "Snow Fox",
+  "license": "MIT",
+  "min_version": "0.14",
+
+  "homepage": "",
+  "description": "Snow Fox website theme",
+
+  "features": [],
+  "tags": [],
+
+  "author": {
+    "name": "Stefano Pogliani"
+  }
+}
