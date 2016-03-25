@@ -1,7 +1,9 @@
 #!/bin/bash
 # Hugo build script for docs.
+EXTRA_ARGS=""
 COMPONENT_PATH="documents"
 LOCAL_MODE="no"
+MODE="served"
 TARGET="debug"
 
 
@@ -25,6 +27,11 @@ while [ "$#" -ne 0 ]; do
       shift
       ;;
 
+    --uglyURLs)
+      EXTRA_ARGS="${EXTRA_ARGS} --uglyURLs"
+      MODE="portable"
+      ;;
+
     *)
       echo "Unable to parse argument '${arg}'!"
       exit 1
@@ -33,12 +40,18 @@ done
 
 
 ### MAIN ###
-ARGS=""
-DEST="${PWD}/out/dist/${TARGET}/${COMPONENT_PATH}"
+DEST="${PWD}/out/dist/${TARGET}/${COMPONENT_PATH}/${MODE}"
 
 if [ "${LOCAL_MODE}" == "yes" ]; then
-  ARGS="--watch server"
+  EXTRA_ARGS="${EXTRA_ARGS} --watch server"
 fi
 
 cd "${COMPONENT_PATH}"
-hugo --destination "${DEST}" ${ARGS} || exit 1
+
+# Build styles.
+mkdir -p themes/snow-fox/static/css
+lessc --relative-urls themes/snow-fox/_less/core.less \
+  > themes/snow-fox/static/css/core.css
+
+# Build site.
+hugo --destination "${DEST}" ${EXTRA_ARGS} || exit 1

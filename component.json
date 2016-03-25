@@ -6,12 +6,15 @@
   "clear-path": "out/dist/<%= target %>/<%= path %>",
 
   "scripts": {
-    "hugo":  "<%= path %>/_build/build-hugo --path '<%= path %>' --target '<%= target %>'",
+    "hugo-portable":  "<%= path %>/_build/build-hugo --path '<%= path %>' --target '<%= target %>' --uglyURLs",
+    "hugo-served":    "<%= path %>/_build/build-hugo --path '<%= path %>' --target '<%= target %>'",
     "graphs": "<%= path %>/_build/graphs",
     "no_analise": "echo Analysis of documentation not implemented."
   },
 
   "targets": {
-    "release": { "tasks": ["hugo"] }
+    "debug":   { "tasks": ["hugo-served", "hugo-portable"] },
+    "release": { "tasks": ["hugo-served", "hugo-portable"] },
+    "test":    { "tasks": ["hugo-served", "hugo-portable"] }
   }
 }

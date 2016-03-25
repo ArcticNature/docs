@@ -1,8 +1,9 @@
 {
-   "baseurl": "http://stefano-pogliani.github.io/snow-fox-pages/",
+   "baseurl": "http://stefano-pogliani.github.io",
    "languageCode": "en-gb",
 
    "canonifyurls": false,
+   "relativeURLs": true,
 
    "title": "SnowFox",
    "copyright": "Copyright (c) 2015, Stefano Pogliani",
@@ -10,14 +11,17 @@
    "contentdir": "content",
    "theme": "snow-fox",
 
+   "menu": {
+     "nav_right": [{
+       "name": "GitHub",
+       "pre": "<i class='fa fa-github'></i>",
+       "url": "https://github.com/ArcticNature/snow-fox",
+       "weight": 200
+     }]
+   },
+
    "params": {
      "AuthorName": "Stefano Pogliani",
-     "description": "Use, configure and contribute to SnowFox, your personal process guardian.",
-
-     "mainMenu": [
-       "features", "install", "guides",
-       "references", "roadmap"
-     ],
-     "noCategoryLink": true
+     "description": "Use, configure and contribute to SnowFox, your personal process guardian."
    }
 }

@@ -1,0 +1,31 @@
+<head>
+  <!-- base href="{{ .Site.BaseURL }}" id="base-href-tag" -->
+  <script type="text/javascript">
+    var detectBaseUrl = function() {
+      var base = "{{ .Site.BaseURL }}";
+      var permalink = "{{ .Permalink }}";
+
+      var is_home ={{ and .IsNode .IsHome }};
+      if (is_home) {
+        permalink += "index.html";
+      }
+
+      var suffix = permalink.substr(base.length);
+      var url = window.location.href;
+      var detected_base = url.substr(0, url.length - suffix.length);
+      if (detected_base[detected_base.length - 1] !== '/') {
+        detected_base += '/'
+      }
+      document.getElementById("base-href-tag").href = detected_base;
+    };
+
+    //detectBaseUrl();
+  </script>
+
+  {{ .Hugo.Generator }}
+  <title>{{ .Title }}</title>
+
+  <link rel="stylesheet" type="text/css" href="{{ "css/core.css" | relURL }}" />
+  <script type="text/javascript" src="{{ "js/jquery-2.2.2.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "js/bootstrap-3.3.6.min.js" | relURL }}"></script>
+</head>

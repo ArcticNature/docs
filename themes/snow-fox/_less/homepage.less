@@ -1,0 +1,45 @@
+#homepage-banner {
+  background-image: url("../img/banner.jpg");
+  background-size:  cover;
+
+  height: 70vh;
+  position: relative;
+
+  & .shadow-layer {
+    background-color: rgba(0, 0, 0, 0.7);
+
+    left: 0;
+    top:  0;
+    height: 100%;
+    width:  100%;
+    position: absolute;
+  }
+
+  & .clear-opacity {
+    position: relative;
+  }
+
+  & #headline {
+    color: white;
+    display: table;
+    height: 100%;
+
+    span {
+      display: table-cell;
+      height: 100%;
+      text-align: center;
+      vertical-align: middle;
+
+      small {
+        font-weight: bold;
+        font-style: italic;
+        font-size: larger;
+      }
+    }
+  }
+
+  & .container-fluid,
+  & .container-fluid > .row {
+    height: 100%;
+  }
+}
