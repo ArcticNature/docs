@@ -33,7 +33,7 @@ JavaScript, ecc ...
 The following is a list of tools that this component needs:
 
   * Hugo (v0.15).
-  * Less (v?).
+  * Less (v2.6.1).
 
 In order to build it, **from the main repository** and with it installed:
 ```bash

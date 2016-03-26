@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html>
   {{ partial "head.html" . }}
-  <body>
-    {{ partial "header.html" . }}
+  <body data-spy="scroll" data-target="#toc">
+    {{ partial "navbar.html" . }}
+  
+    <div class="container-fluid hugo-single-content">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-2 col-md-8">
+          <div class="page-header">
+            {{ if isset .Params "headline" }}
+            <h1>{{ .Params.headline }}</h1>
+            {{ else }}
+            <h1>{{ .Title }}</h1>
+            {{ end }}
+          </div> <!-- .page-header -->
 
-    {{ .RelPermalink }}
+          <div class="row">
+            <div class="col-xs-12 col-md-9">
+              {{ .Content }}
+            </div> <!-- .col-xs-12.col-md-10 -->
+
+            <div class="hidden-xs hidden-sm col-md-3">
+              {{ .TableOfContents }}
+            </div> <!-- .hidden-xs.hidden-sm.col-md-2 -->
+          </div> <!-- .row -->
+        </div> <!-- .col-xs-12.col-md-offset-1.col-md-9 -->
+
+      </div> <!-- .row -->
+    </div> <!-- .container-fluid -->
   </body>
 </html>
