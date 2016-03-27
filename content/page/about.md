@@ -41,7 +41,10 @@ I strongly encourage you to check them out!!!
 
 #### Documentation & WebSite
 
+  * [Bootstrap](http://getbootstrap.com/): a framework for responsive web sites and applications.
+  * [Font Awesome](https://fortawesome.github.io/Font-Awesome/): The iconic font and CSS toolkit.
   * [Hugo](https://gohugo.io/): static site generator.
+  * [JQuery](https://jquery.com/): a fast, small, and feature-rich JavaScript library.
   * [Less](http://lesscss.org/): a CSS pre-processor.
   * [Homepage backgroud image](http://www.geograph.org.uk/photo/1657546):
     thanks to [Mary and Angus Hogg](http://www.geograph.org.uk/profile/7257).

@@ -20,6 +20,3 @@ cd "${TARGET_PATH}"
 git add --all .
 git commit -m "AUTOMATED: documents - update published version"
 git push origin master
-
-cd ..
-git subtree push --prefix=gh-pages git@github.com:ArcticNature/docs.git gh-pages
