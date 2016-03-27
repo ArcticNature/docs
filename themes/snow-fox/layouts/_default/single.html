@@ -16,13 +16,22 @@
           </div> <!-- .page-header -->
 
           <div class="row">
+
+            {{ if .Params.notoc }}
+            <div class="col-xs-12">
+              {{ .Content }}
+            </div> <!-- .col-xs-12 -->
+
+            {{ else }}
             <div class="col-xs-12 col-md-9">
               {{ .Content }}
-            </div> <!-- .col-xs-12.col-md-10 -->
+            </div> <!-- .col-xs-12.col-md-9 -->
 
             <div class="hidden-xs hidden-sm col-md-3">
               {{ .TableOfContents }}
             </div> <!-- .hidden-xs.hidden-sm.col-md-2 -->
+            {{ end }}
+
           </div> <!-- .row -->
         </div> <!-- .col-xs-12.col-md-offset-1.col-md-9 -->
 
