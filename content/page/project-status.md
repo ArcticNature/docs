@@ -8,15 +8,12 @@ notoc = true
     weight = 2
 +++
 
-<div class="alert alert-warning" role="alert">
-  <p>
-    <b>Early development warning!!!</b>
-    Be aware that SnowFox is in its early development stages.
-  </p>
-  <p>
-    <b>Do not use in production environments</b>.
-  </p>
-</div>
+{{% alert warning %}}
+  **Early development warning!!!**
+  Be aware that SnowFox is in its early development stages.
+
+  **Do not use in production environments**.
+{{% /alert %}}
 
 
 Road map
