@@ -48,6 +48,9 @@ I strongly encourage you to check them out!!!
   * [Less](http://lesscss.org/): a CSS pre-processor.
   * [Homepage backgroud image](http://www.geograph.org.uk/photo/1657546):
     thanks to [Mary and Angus Hogg](http://www.geograph.org.uk/profile/7257).
+  * [Pygments](http://pygments.org/): a generic syntax highlighter.
+  * [Pygments CSS](http://richleland.github.io/pygments-css/):
+    pre-generated CSS styles for Pygments.
 
 
 Contributing

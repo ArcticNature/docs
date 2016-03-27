@@ -5,11 +5,12 @@
    "canonifyurls": false,
    "relativeURLs": true,
 
-   "title": "SnowFox",
-   "copyright": "Copyright (c) 2015, Stefano Pogliani",
-
    "contentdir": "content",
    "theme": "snow-fox",
+   "pygmentsuseclasses": true,
+
+   "title": "SnowFox",
+   "copyright": "Copyright (c) 2015, Stefano Pogliani",
 
    "menu": {
      "nav_right": [{
