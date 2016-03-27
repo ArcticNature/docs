@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "navbar.html" . }}
+
+    <!-- img id="homepage-banner" -->
+    <div id="homepage-banner" class="jumbotron">
+      <div class="shadow-layer"></div>
+
+      <div class="clear-opacity container-fluid">
+        <div class="row">
+          <div id="headline" class="col-xs-12">
+            <span>
+              <h1>
+                <i class="fa fa-paw"></i>
+                Lost the trail?
+              </h1>
+              <small>
+                Sorry about that!
+                Maybe one of the links in the top menu can help you out.
+              </small>
+            </span>
+          </div> <!-- #headline -->
+        </div> <!-- .row -->
+      </div> <!-- .container-fluid -->
+    </div>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>
