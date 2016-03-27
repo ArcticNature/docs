@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SnowFox</title>
+    <link>http://stefano-pogliani.github.io/</link>
+    <description>Recent content on SnowFox</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Copyright (c) 2015, Stefano Pogliani</copyright>
+    <lastBuildDate>Fri, 25 Mar 2016 16:49:38 +0000</lastBuildDate>
+    <atom:link href="http://stefano-pogliani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Project Status</title>
+      <link>http://stefano-pogliani.github.io/page/project-status/</link>
+      <pubDate>Fri, 25 Mar 2016 16:49:38 +0000</pubDate>
+      
+      <guid>http://stefano-pogliani.github.io/page/project-status/</guid>
+      <description>
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+  &lt;p&gt;
+    &lt;b&gt;Early development warning!!!&lt;/b&gt;
+    Be aware that SnowFox is in its early development stages.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;Do not use in production environments&lt;/b&gt;.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;road-map:d13b20e77898b314e01203e8c542ab16&#34;&gt;Road map&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Website &amp;amp; documentaion.&lt;/li&gt;
+&lt;li&gt;Event ids and correlation.&lt;/li&gt;
+&lt;li&gt;System state information.&lt;/li&gt;
+&lt;li&gt;Command Line Client to control &lt;code&gt;snow-fox&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;System configuration.&lt;/li&gt;
+&lt;li&gt;Service registry.&lt;/li&gt;
+&lt;li&gt;Service configuration.&lt;/li&gt;
+&lt;li&gt;Basic service commands (start, stop, list, status).&lt;/li&gt;
+&lt;li&gt;TCP event source.&lt;/li&gt;
+&lt;li&gt;Client connects over tcp.&lt;/li&gt;
+&lt;li&gt;Cluster support.&lt;/li&gt;
+&lt;li&gt;Metadata storage.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;snow-fox-bootstrap&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Authentication and authorisation system.&lt;/li&gt;
+&lt;li&gt;JSON API.&lt;/li&gt;
+&lt;li&gt;Web site.&lt;/li&gt;
+&lt;li&gt;Process monitoring.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;next-release:d13b20e77898b314e01203e8c542ab16&#34;&gt;Next release&lt;/h2&gt;
+
+&lt;p&gt;The topic for the next release is: &lt;b&gt;basic service commands&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;This release cycle will be complete when service start, list,
+stop, and status are implemented.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://stefano-pogliani.github.io/page/about/</link>
+      <pubDate>Sun, 20 Mar 2016 20:46:01 +0000</pubDate>
+      
+      <guid>http://stefano-pogliani.github.io/page/about/</guid>
+      <description>
+
+&lt;h2 id=&#34;metadata:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Metadata&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Author: Stefano Pogliani (&lt;a href=&#34;mailto:stefano@spogliani.net&#34;&gt;stefano@spogliani.net&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;License: &lt;a href=&#34;https://opensource.org/licenses/BSD-3-Clause&#34;&gt;BSD 3 Clause&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Latest updates and roadmap: &lt;a href=&#34;./page/project-status/&#34;&gt;See this page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;acknowledgements:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;p&gt;SnowFox is built on top of many great Open Source projects.
+I strongly encourage you to check them out!!!&lt;/p&gt;
+
+&lt;h4 id=&#34;snowfox-core:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;SnowFox core&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gflags/gflags&#34;&gt;Google Flags&lt;/a&gt;: command line parsing for C/C++&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;build-tools:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Build tools&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://cppcheck.sourceforge.net/&#34;&gt;CppCheck&lt;/a&gt;: a C/C++ static analysis tool.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/google/styleguide/tree/gh-pages/cpplint&#34;&gt;CppLint&lt;/a&gt;: C++ linter (patched version included).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gcovr.com/&#34;&gt;Gcovr&lt;/a&gt;: generate C/C++ code coverage (included).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gcc.gnu.org/&#34;&gt;Gnu Gcc&lt;/a&gt;: C/C++ compiler.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/google/googletest&#34;&gt;Google Test&lt;/a&gt;: a C++ test framework.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.graphviz.org/&#34;&gt;Graphviz&lt;/a&gt;: graph visualization software.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gruntjs.com/&#34;&gt;Grunt&lt;/a&gt;: a JavaScript task runner.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt;: a JavaScript runtime.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt;: node&amp;rsquo;s package manager.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/&#34;&gt;Protocol Buffers&lt;/a&gt;: a mechanism for serializing structured data.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dcodeIO/protobuf.js&#34;&gt;Protobuf.js&lt;/a&gt;: a JavaScript compiler and runtime for protocol buffers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;documentation-website:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Documentation &amp;amp; WebSite&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;: static site generator.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lesscss.org/&#34;&gt;Less&lt;/a&gt;: a CSS pre-processor.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.geograph.org.uk/photo/1657546&#34;&gt;Homepage backgroud image&lt;/a&gt;:
+thanks to &lt;a href=&#34;http://www.geograph.org.uk/profile/7257&#34;&gt;Mary and Angus Hogg&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;contributing:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Contributing&lt;/h2&gt;
+
+&lt;p&gt;SnowFox is at the very early stages of development.
+All the code is open source on GitHub and &lt;a href=&#34;https://github.com/ArcticNature/snow-fox/blob/master/Readme.md&#34;&gt;https://github.com/ArcticNature/snow-fox/blob/master/Readme.md&lt;/a&gt;
+contains the instructions on how to set up a development environment.&lt;/p&gt;
+
+&lt;p&gt;Feel free to check out the repositories, make any changes, and open pull requests.
+Is you have any ideas or issues you can also open an &lt;a href=&#34;https://github.com/ArcticNature/snow-fox/issues&#34;&gt;issue&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome to the Tundra</title>
+      <link>http://stefano-pogliani.github.io/</link>
+      <pubDate>Sun, 20 Mar 2016 17:18:35 +0000</pubDate>
+      
+      <guid>http://stefano-pogliani.github.io/</guid>
+      <description>&lt;p&gt;Homepage placeholder.
+This content is not accessible in the Hugo template for the index.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

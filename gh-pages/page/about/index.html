@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <script type="text/javascript">
+    var detectBaseUrl = function() {
+      var base = "http:\/\/stefano-pogliani.github.io";
+      var permalink = "http:\/\/stefano-pogliani.github.io\/page\/about\/";
+
+      var is_home = false ;
+      if (is_home) {
+        permalink += "index.html";
+      }
+
+      var suffix = permalink.substr(base.length);
+      var url = window.location.href;
+      var detected_base = url.substr(0, url.length - suffix.length);
+      if (detected_base[detected_base.length - 1] !== '/') {
+        detected_base += '/'
+      }
+      document.getElementById("base-href-tag").href = detected_base;
+    };
+
+    
+  </script>
+
+  
+  <title>About | SnowFox</title>
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+  <link rel="stylesheet" type="text/css" href="../../css/core.css" />
+
+  <script type="text/javascript" src="../../js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap-3.3.6.min.js"></script>
+</head>
+
+  <body data-spy="scroll" data-target="#toc">
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#full-navigation"
+          aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a class="navbar-brand" href="../../">
+        SnowFox Hub
+      </a>
+    </div> 
+
+    
+    <div class="collapse navbar-collapse" id="full-navigation">
+      
+
+      
+      <ul class="nav navbar-nav">
+        
+
+        
+        <li class="">
+        <a href="../../page/project-status/"> Project Status </a>
+        </li>
+        
+        
+      </ul>
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        <li class="active">
+        <a href="../../page/about/"> About </a>
+        </li>
+        
+        
+
+        
+        <li class="">
+        <a href="https://github.com/ArcticNature/snow-fox"><i class='fa fa-github'></i> GitHub </a>
+        </li>
+        
+        
+      </ul>
+    </div> 
+
+  </div>
+</nav>
+
+  
+    <div class="container-fluid hugo-single-content">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-2 col-md-8">
+          <div class="page-header">
+            
+            <h1>About this project</h1>
+            
+          </div> 
+
+          <div class="row">
+
+            
+            <div class="col-xs-12 col-md-9">
+              
+
+<h2 id="metadata:6083a88ee3411b0d17ce02d738f69d47">Metadata</h2>
+
+<ul>
+<li>Author: Stefano Pogliani (<a href="mailto:stefano@spogliani.net">stefano@spogliani.net</a>)</li>
+<li>License: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3 Clause</a></li>
+<li>Latest updates and roadmap: <a href="../../page/project-status/">See this page</a></li>
+</ul>
+
+<h2 id="acknowledgements:6083a88ee3411b0d17ce02d738f69d47">Acknowledgements</h2>
+
+<p>SnowFox is built on top of many great Open Source projects.
+I strongly encourage you to check them out!!!</p>
+
+<h4 id="snowfox-core:6083a88ee3411b0d17ce02d738f69d47">SnowFox core</h4>
+
+<ul>
+<li><a href="https://github.com/gflags/gflags">Google Flags</a>: command line parsing for C/C++</li>
+</ul>
+
+<h4 id="build-tools:6083a88ee3411b0d17ce02d738f69d47">Build tools</h4>
+
+<ul>
+<li><a href="http://cppcheck.sourceforge.net/">CppCheck</a>: a C/C++ static analysis tool.</li>
+<li><a href="https://github.com/google/styleguide/tree/gh-pages/cpplint">CppLint</a>: C++ linter (patched version included).</li>
+<li><a href="http://gcovr.com/">Gcovr</a>: generate C/C++ code coverage (included).</li>
+<li><a href="https://gcc.gnu.org/">Gnu Gcc</a>: C/C++ compiler.</li>
+<li><a href="https://github.com/google/googletest">Google Test</a>: a C++ test framework.</li>
+<li><a href="http://www.graphviz.org/">Graphviz</a>: graph visualization software.</li>
+<li><a href="http://gruntjs.com/">Grunt</a>: a JavaScript task runner.</li>
+<li><a href="https://nodejs.org/en/">Node.js</a>: a JavaScript runtime.</li>
+<li><a href="https://www.npmjs.com/">NPM</a>: node&rsquo;s package manager.</li>
+<li><a href="https://developers.google.com/protocol-buffers/">Protocol Buffers</a>: a mechanism for serializing structured data.</li>
+<li><a href="https://github.com/dcodeIO/protobuf.js">Protobuf.js</a>: a JavaScript compiler and runtime for protocol buffers.</li>
+</ul>
+
+<h4 id="documentation-website:6083a88ee3411b0d17ce02d738f69d47">Documentation &amp; WebSite</h4>
+
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a>: static site generator.</li>
+<li><a href="http://lesscss.org/">Less</a>: a CSS pre-processor.</li>
+<li><a href="http://www.geograph.org.uk/photo/1657546">Homepage backgroud image</a>:
+thanks to <a href="http://www.geograph.org.uk/profile/7257">Mary and Angus Hogg</a>.</li>
+</ul>
+
+<h2 id="contributing:6083a88ee3411b0d17ce02d738f69d47">Contributing</h2>
+
+<p>SnowFox is at the very early stages of development.
+All the code is open source on GitHub and <a href="https://github.com/ArcticNature/snow-fox/blob/master/Readme.md">https://github.com/ArcticNature/snow-fox/blob/master/Readme.md</a>
+contains the instructions on how to set up a development environment.</p>
+
+<p>Feel free to check out the repositories, make any changes, and open pull requests.
+Is you have any ideas or issues you can also open an <a href="https://github.com/ArcticNature/snow-fox/issues">issue</a>.</p>
+
+            </div> 
+
+            <div class="hidden-xs hidden-sm col-md-3">
+              <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#metadata:6083a88ee3411b0d17ce02d738f69d47">Metadata</a></li>
+<li><a href="#acknowledgements:6083a88ee3411b0d17ce02d738f69d47">Acknowledgements</a>
+<ul>
+<li>
+<ul>
+<li><a href="#snowfox-core:6083a88ee3411b0d17ce02d738f69d47">SnowFox core</a></li>
+<li><a href="#build-tools:6083a88ee3411b0d17ce02d738f69d47">Build tools</a></li>
+<li><a href="#documentation-website:6083a88ee3411b0d17ce02d738f69d47">Documentation &amp; WebSite</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#contributing:6083a88ee3411b0d17ce02d738f69d47">Contributing</a></li>
+</ul></li>
+</ul>
+</nav>
+            </div> 
+            
+
+          </div> 
+        </div> 
+
+      </div> 
+    </div> 
+  </body>
+</html>

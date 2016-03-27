@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <script type="text/javascript">
+    var detectBaseUrl = function() {
+      var base = "http:\/\/stefano-pogliani.github.io";
+      var permalink = "http:\/\/stefano-pogliani.github.io\/";
+
+      var is_home = true ;
+      if (is_home) {
+        permalink += "index.html";
+      }
+
+      var suffix = permalink.substr(base.length);
+      var url = window.location.href;
+      var detected_base = url.substr(0, url.length - suffix.length);
+      if (detected_base[detected_base.length - 1] !== '/') {
+        detected_base += '/'
+      }
+      document.getElementById("base-href-tag").href = detected_base;
+    };
+
+    
+  </script>
+
+  
+  <title>SnowFox</title>
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+  <link rel="stylesheet" type="text/css" href="./css/core.css" />
+
+  <script type="text/javascript" src="./js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap-3.3.6.min.js"></script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#full-navigation"
+          aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a class="navbar-brand" href="./">
+        SnowFox Hub
+      </a>
+    </div> 
+
+    
+    <div class="collapse navbar-collapse" id="full-navigation">
+      
+
+      
+      <ul class="nav navbar-nav">
+        
+
+        
+        <li class="">
+        <a href="./page/project-status/"> Project Status </a>
+        </li>
+        
+        
+      </ul>
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        <li class="">
+        <a href="./page/about/"> About </a>
+        </li>
+        
+        
+
+        
+        <li class="">
+        <a href="https://github.com/ArcticNature/snow-fox"><i class='fa fa-github'></i> GitHub </a>
+        </li>
+        
+        
+      </ul>
+    </div> 
+
+  </div>
+</nav>
+
+
+    
+    <div id="homepage-banner" class="jumbotron">
+      <div class="shadow-layer"></div>
+
+      <div class="clear-opacity container-fluid">
+        <div class="row">
+          <div id="headline" class="col-xs-12">
+            <span>
+              <h1>
+                <i class="fa fa-paw"></i>
+                SnowFox
+              </h1>
+              <small>
+                An opinionated, yet flexible, framework to run,
+                manage, and monitor services.
+              </small>
+            </span>
+          </div> 
+        </div> 
+      </div> 
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-sm-6 col-md-offset-2 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>
+                <i class="fa fa-exclamation-circle"></i>
+                Opinionated, yet flexible
+              </h1>
+              <p>
+                SnowFox sometimes assumes how you will organise and manage
+                your system but never which technologies you should use.
+              </p>
+              <p>
+                For example, SnowFox requires that you keep all configuration
+                under version control but it does not care which VCS you use.
+              </p>
+              <p>
+                Not everything is allowed though!
+                Check out the relevant documentation to know what options
+                are available for you.
+              </p>
+            </div> 
+          </div> 
+        </div> 
+
+        <div class="col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>
+                <i class="fa fa-plug"></i>
+                Run what you like
+              </h1>
+              <p>
+                The runnable unit in SnowFox it a service instance.
+                Usually these are processes started on the node by SnowFox
+                but it does not have to be like that.
+              </p>
+              <p>
+                <b>Connectors</b> are a way to start, stop and interact with
+                instances whether these are processes, docker containers, or
+                any other tool for which a connector is available.
+              </p>
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+
+      <div class="row">
+        <div class="col-sm-6 col-md-offset-2 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>
+                <i class="fa fa-code-fork"></i>
+                Versioned to the core
+              </h1>
+              <p>
+                SnowFox demands for a repository to load its configuration from.
+                This will not only include the system configuration but also
+                the definition files used to start services.
+              </p>
+              <p>
+                Having version controlled service definitions means that you
+                can run multiple instances of the same service with different
+                versions and/or configurations!
+              </p>
+            </div> 
+          </div> 
+        </div> 
+
+        <div class="col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>
+                <i class="fa fa-puzzle-piece"></i>
+                Easily extensible
+              </h1>
+              <p>
+                Components add functionality to SnowFox (or other components).
+                SnowFox's build system automatically detects and compiles
+                components.
+              </p>
+              <p>
+                Through the provided API, components can implement new features,
+                modify the behaviour of the existing system, and/or allow
+                new tools/systems to be used with SnowFox.
+              </p>
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+
+      <div class="row">
+        <div class="col-sm-6 col-md-offset-2 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>
+                <i class="fa fa-refresh"></i>
+                Don't reinvent the wheel
+              </h1>
+              <p>
+                SnowFox is not only open source by itself, but it is built
+                using other open source projects to achieve its goals without
+                having to re-implement something that already exits.
+              </p>
+              <p>
+                This means:
+                <ul>
+                  <li>Better stability: rely on used and trusted code.</li>
+                  <li>
+                    Reusable services: for other applications in you system.
+                  </li>
+                  <li>
+                    Easier to add features: because time is not spent creating
+                    reliable support tools or services.
+                  </li>
+                </ul>
+              </p>
+            </div> 
+          </div> 
+        </div> 
+
+        <div class="col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>
+                <i class="fa fa-paper-plane"></i>
+                Easy to start
+              </h1>
+              <p>
+                SnowFox depends on some Open Source services in order to work.
+                But since SnowFox's job is to run and manger services it would be
+                nice if we did not have to manage these dependencies.
+              </p>
+              <p>
+                <code>snow-fox-bootstrap</code> is here to solve the problem.
+                Using the same configuration repository, it ensures that the
+                required services are up and running.
+              </p>
+              <p>
+                It does so while makeing it possible for SnowFox to detect those
+                services so that when it starts, you can manage its dependencies
+                through SnowFox itself!
+              </p>
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+
+    </div> 
+
+  </body>
+</html>

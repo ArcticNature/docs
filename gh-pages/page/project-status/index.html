@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <script type="text/javascript">
+    var detectBaseUrl = function() {
+      var base = "http:\/\/stefano-pogliani.github.io";
+      var permalink = "http:\/\/stefano-pogliani.github.io\/page\/project-status\/";
+
+      var is_home = false ;
+      if (is_home) {
+        permalink += "index.html";
+      }
+
+      var suffix = permalink.substr(base.length);
+      var url = window.location.href;
+      var detected_base = url.substr(0, url.length - suffix.length);
+      if (detected_base[detected_base.length - 1] !== '/') {
+        detected_base += '/'
+      }
+      document.getElementById("base-href-tag").href = detected_base;
+    };
+
+    
+  </script>
+
+  
+  <title>Project Status | SnowFox</title>
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+  <link rel="stylesheet" type="text/css" href="../../css/core.css" />
+
+  <script type="text/javascript" src="../../js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap-3.3.6.min.js"></script>
+</head>
+
+  <body data-spy="scroll" data-target="#toc">
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#full-navigation"
+          aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a class="navbar-brand" href="../../">
+        SnowFox Hub
+      </a>
+    </div> 
+
+    
+    <div class="collapse navbar-collapse" id="full-navigation">
+      
+
+      
+      <ul class="nav navbar-nav">
+        
+
+        
+        <li class="active">
+        <a href="../../page/project-status/"> Project Status </a>
+        </li>
+        
+        
+      </ul>
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        <li class="">
+        <a href="../../page/about/"> About </a>
+        </li>
+        
+        
+
+        
+        <li class="">
+        <a href="https://github.com/ArcticNature/snow-fox"><i class='fa fa-github'></i> GitHub </a>
+        </li>
+        
+        
+      </ul>
+    </div> 
+
+  </div>
+</nav>
+
+  
+    <div class="container-fluid hugo-single-content">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-2 col-md-8">
+          <div class="page-header">
+            
+            <h1>Project Status</h1>
+            
+          </div> 
+
+          <div class="row">
+
+            
+            <div class="col-xs-12">
+              
+
+<div class="alert alert-warning" role="alert">
+  <p>
+    <b>Early development warning!!!</b>
+    Be aware that SnowFox is in its early development stages.
+  </p>
+  <p>
+    <b>Do not use in production environments</b>.
+  </p>
+</div>
+
+<h2 id="road-map:d13b20e77898b314e01203e8c542ab16">Road map</h2>
+
+<ul>
+<li>Website &amp; documentaion.</li>
+<li>Event ids and correlation.</li>
+<li>System state information.</li>
+<li>Command Line Client to control <code>snow-fox</code>.</li>
+<li>System configuration.</li>
+<li>Service registry.</li>
+<li>Service configuration.</li>
+<li>Basic service commands (start, stop, list, status).</li>
+<li>TCP event source.</li>
+<li>Client connects over tcp.</li>
+<li>Cluster support.</li>
+<li>Metadata storage.</li>
+<li><code>snow-fox-bootstrap</code>.</li>
+<li>Authentication and authorisation system.</li>
+<li>JSON API.</li>
+<li>Web site.</li>
+<li>Process monitoring.</li>
+</ul>
+
+<h2 id="next-release:d13b20e77898b314e01203e8c542ab16">Next release</h2>
+
+<p>The topic for the next release is: <b>basic service commands</b>.</p>
+
+<p>This release cycle will be complete when service start, list,
+stop, and status are implemented.</p>
+
+            </div> 
+
+            
+
+          </div> 
+        </div> 
+
+      </div> 
+    </div> 
+  </body>
+</html>
