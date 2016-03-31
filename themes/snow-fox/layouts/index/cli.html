@@ -7,6 +7,7 @@
     <div class="container-fluid hugo-single-content">
       <div class="row">
         <div class="col-xs-12 col-md-offset-2 col-md-8">
+
           <div class="page-header">
             <h1>
               {{ if isset .Params "headline" }}
@@ -21,28 +22,48 @@
           </div> <!-- .page-header -->
 
           <div class="row">
-
-            {{ if .Params.notoc }}
-            <div class="col-xs-12">
-              {{ .Content }}
-            </div> <!-- .col-xs-12 -->
-
-            {{ else }}
             <div class="col-xs-12 col-md-9">
               {{ .Content }}
+
+              {{ range .Site.Taxonomies.references.cli }}
+              <div class="cli-binaries">
+                <h2 id="{{ .Page.UniqueID }}">
+                  <a href="{{ .Page.RelPermalink }}">
+                    <code>{{ .Page.LinkTitle }}</code>
+                  </a>
+                </h2>
+
+                <p>{{ .Page.Summary }}</p>
+                {{ .Page.TableOfContents }}
+              </div>
+              {{ end }}
+
+
             </div> <!-- .col-xs-12.col-md-9 -->
 
             <div class="hidden-xs hidden-sm col-md-3">
               {{ .TableOfContents }}
+
+              <ul class="cli-toc">
+                {{ range .Site.Taxonomies.references.cli }}
+                <li>
+                  <a href="#{{ .Page.UniqueID }}">
+                    <code>{{ .Page.LinkTitle }}</code>
+                  </a>
+                </li>
+                {{ end }}
+              </ul>
             </div> <!-- .hidden-xs.hidden-sm.col-md-3 -->
-            {{ end }}
-
           </div> <!-- .row -->
-        </div> <!-- .col-xs-12.col-md-offset-1.col-md-9 -->
 
+        </div> <!-- .col-xs-12.col-md-offset-1.col-md-9 -->
       </div> <!-- .row -->
     </div> <!-- .container-fluid -->
 
     {{ partial "footer.html" . }}
+
+    <!-- Load extra scripts to patch the TOCs. -->
+    <script type="text/javascript" src="{{ "js/index/cli.js" | relURL }}">
+    </script>
   </body>
 </html>

@@ -19,7 +19,6 @@ notoc = true
 Road map
 --------
 
-  * Website & documentaion.
   * Event ids and correlation.
   * System state information.
   * Command Line Client to control `snow-fox`.

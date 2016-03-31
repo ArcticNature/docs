@@ -25,9 +25,10 @@
       <!-- Left side menu -->
       <ul class="nav navbar-nav">
         {{ range .Site.Menus.nav_left }}
+        {{ $force_active := eq .Identifier $page.Params.force_menu }}
+        {{ $active := or $force_active ($page.IsMenuCurrent "nav_left" .) }}
 
         {{ if .HasChildren }}
-        {{ $active := $page.IsMenuCurrent "nav_left" . }}
         {{ $groupActive := or $active ($page.HasMenuCurrent "nav_left" .) }}
         <li class="dropdown {{if $groupActive}}active{{end}}">
           <a href="#" class="dropdown-toggle"
@@ -50,7 +51,7 @@
         </li>
 
         {{ else }}
-        <li class="{{if $page.IsMenuCurrent "nav_left" .}}active{{end}}">
+        <li class="{{if $active}}active{{end}}">
         <a href="{{ .URL }}">{{ .Pre }} {{ .Name }} {{ .Post }}</a>
         </li>
         {{ end }}
@@ -60,9 +61,10 @@
       <!-- Right side menu -->
       <ul class="nav navbar-nav navbar-right">
         {{ range .Site.Menus.nav_right }}
+        {{ $force_active := eq .Identifier $page.Params.force_menu }}
+        {{ $active := or $force_active ($page.IsMenuCurrent "nav_right" .) }}
 
         {{ if .HasChildren }}
-        {{ $active := $page.IsMenuCurrent "nav_right" . }}
         {{ $groupActive := or $active ($page.HasMenuCurrent "nav_right" .) }}
         <li class="dropdown {{if $groupActive}}active{{end}}">
           <a href="#" class="dropdown-toggle"
@@ -85,7 +87,7 @@
         </li>
 
         {{ else }}
-        <li class="{{if $page.IsMenuCurrent "nav_right" .}}active{{end}}">
+        <li class="{{if $active}}active{{end}}">
         <a href="{{ .URL }}">{{ .Pre }} {{ .Name }} {{ .Post }}</a>
         </li>
         {{ end }}

@@ -15,10 +15,12 @@ title = "Install"
   **Do not use in production environments**.
 {{% /alert %}}
 
+<!--
 {{% alert info %}}
 Looking to get up and running fast so you can try things out?
-**Checkout the [Quick Start]({{< relref "quick-start.md" >}}) guide!**
+**Checkout the [Quick Start]({#{< relref "quick-start.md" >}}) guide!**
 {{% /alert %}}
+-->
 
 
 Install from source
@@ -45,11 +47,12 @@ sudo dnf install cmake gcc-c++ git make openssl-devel protobuf-compiler protobuf
 
 Install the latest version of Node.js, NPM, and Grunt:
 {{< highlight bash >}}
-curl --silent --location https://rpm.nodesource.com/setup_5.x | bash -
-dnf install -y nodejs
-npm install -g grunt-cli
+curl --silent --location https://rpm.nodesource.com/setup_5.x | sudo bash -
+sudo dnf install nodejs
+sudo npm install grunt-cli
 {{< /highlight >}}
 
+### Compiling the code
 Pull SnowFox's source code and compile it:
 {{< highlight bash >}}
 mkdir -p /tmp/snow-fox-source
@@ -62,16 +65,21 @@ npm install
 grunt distribute
 {{< /highlight >}}
 
+### Installing the result
 The output of a distribution build is stored in `out/packages`.
 For convenience, let us put the compiled distribution in `/opt`:
 {{< highlight bash >}}
 sudo mkdir -p /opt
 sudo cp --recursive --preserve=all out/packages/snow-fox /opt/
+sudo useradd --home-dir /opt/snow-fox --shell /bin/false --system --user-group snow-fox
+sudo chown -R snow-fox:snow-fox /opt/snow-fox
 {{< /highlight >}}
 
 {{% alert success %}}
   **Congratulations!**
   SnowFox is now installed in `/opt/snow-fox/bin/snow-fox`.
 
-  Check out the `Quick Start`, `Guides and Tutorials`, and `References` sections!
+  Check out the `Quick Start`,
+  `Guides and Tutorials`, and
+  [References]({{< relref "references.md" >}}) sections!
 {{% /alert %}}

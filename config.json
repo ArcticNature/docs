@@ -21,6 +21,10 @@
      }]
    },
 
+   "taxonomies": {
+     "reference": "references"
+   },
+
    "params": {
      "AuthorName": "Stefano Pogliani",
      "description": "Use, configure and contribute to SnowFox, your personal process guardian."
