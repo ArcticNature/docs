@@ -9,7 +9,8 @@ force_menu = "ref"
 +++
 
 The SnowFox manager binary.
-Logic unit of SnowFox, deals with user requests and system events.
+Logic unit of SnowFox, deals with user requests and system events.  
+**`snow-fox-manager` should not be called directly, let the daemon do it!**
 <!--more-->
 
 

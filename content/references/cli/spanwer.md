@@ -9,7 +9,8 @@ references_weight = 2
 +++
 
 The SnowFox manager binary.
-Priviledged unit of SnowFox, deals with operations that require root.
+Priviledged unit of SnowFox, deals with operations that require root.  
+**`snow-fox-spawner` should not be called directly, let the daemon do it!**
 <!--more-->
 
 

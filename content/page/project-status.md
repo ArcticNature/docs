@@ -16,25 +16,42 @@ notoc = true
 {{% /alert %}}
 
 
+Version number
+--------------
+The version number follows the rules of [Semantic Versioning](http://semver.org/)
+with one difference: for versions below `1.0.0` the meaning is shifted by one and
+there is no `PATCH`.
+
+This is to clarify the, very useful, loose constraints on versions below `1.0.0`.
+For these versions, when new features are added quickly and compatibility
+breaks often, the `MAJOR.MINOR.PATCH` are as follows:
+
+  * `MAJOR`: it is always `0`.
+  * `MINOR`: represents a backward incompatible change.
+  * `PATCH`: represents a backward compatible change (feature or bug fix).
+
+
 Road map
 --------
 
-  * Event ids and correlation.
-  * System state information.
-  * Command Line Client to control `snow-fox`.
-  * System configuration.
-  * Service registry.
-  * Service configuration.
-  * Basic service commands (start, stop, list, status).
-  * TCP event source.
-  * Client connects over tcp.
-  * Cluster support.
-  * Metadata storage.
-  * `snow-fox-bootstrap`.
-  * Authentication and authorisation system.
-  * JSON API.
-  * Web site.
-  * Process monitoring.
+{{% bootstrap-table "table-striped" %}}
+
+| Milestone estimate | Feature                    | Status  |
+| ------------------ | -------------------------- | ------- |
+| 0.0.1              | Event ids and correlation  | pending |
+| 0.0.2              | System state information   | pending |
+| 0.0.3              | Command Line Client        | pending |
+| 0.0.4              | System configuration       | pending |
+| 0.0.5              | Service registry           | pending |
+| 0.0.6              | Service load/list          | pending |
+| 0.0.7              | Service start/stop/status  | pending |
+| 0.0.8              | TCP connection support     | pending |
+| 0.0.9              | Client connects over tcp   | pending |
+| 0.0.10             | Cluster support            | pending |
+| 0.0.11             | Metadata storage           | pending |
+| 0.0.12             | `snow-fox-bootstrap`       | pending |
+
+{{% /bootstrap-table %}}
 
 Next release
 ------------
@@ -42,3 +59,5 @@ The topic for the next release is: <b>basic service commands</b>.
 
 This release cycle will be complete when service start, list,
 stop, and status are implemented.
+
+This will approximately be version `0.0.7`.

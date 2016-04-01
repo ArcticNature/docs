@@ -11,9 +11,10 @@ headline = "About this project"
 Metadata
 --------
 
-  * Author: Stefano Pogliani (<stefano@spogliani.net>)
-  * License: [BSD 3 Clause](https://opensource.org/licenses/BSD-3-Clause)
-  * Latest updates and roadmap: [See this page]({{< relref "project-status.md" >}})
+  * Author: Stefano Pogliani (<stefano@spogliani.net>).
+  * License: [BSD 3 Clause](https://opensource.org/licenses/BSD-3-Clause).
+  * Latest updates and roadmap: [See this page]({{< relref "project-status.md" >}}).
+  * Meaning of the version number: [Almost SemVer]({{< relref "project-status.md#version-number" >}}).
 
 
 Acknowledgements
