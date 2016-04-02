@@ -30,6 +30,17 @@ breaks often, the `MAJOR.MINOR.PATCH` are as follows:
   * `MINOR`: represents a backward incompatible change.
   * `PATCH`: represents a backward compatible change (feature or bug fix).
 
+### The public API
+At the basis of semantic versioning there is a public API.
+The version number changes based on changes to that.
+For the purpose of versioning, the public API of SnowFox is composed of:
+
+  * The [command line]({{< relref "references/cli.md" >}}) options.
+  * The configuration format.
+  * The [public protocol buffer]({{< relref "references/protobuf/public.md" >}}) API.
+  * The plugin API.
+  * The lifecycles steps.
+
 
 Road map
 --------

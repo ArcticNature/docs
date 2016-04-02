@@ -11,3 +11,16 @@ table.hugo-attributes-table {
     padding-right: 2em;
   }
 }
+
+div.draft {
+  border: 1px solid @brand-danger;
+
+  &::before {
+    .label;
+    .label-danger;
+
+    content: "Draft";
+    display: block;
+    margin:  1em;
+  }
+}

@@ -2,8 +2,10 @@
 date = "2016-03-25T16:51:30Z"
 force_menu = "ref"
 title = "Command Line Reference"
+
 type = "index"
-layout = "cli"
+layout = "summary"
+ref_name = "cli"
 
 +++
 

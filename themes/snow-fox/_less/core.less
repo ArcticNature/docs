@@ -4,24 +4,8 @@
 @import "navbar.less";
 @import "footer.less";
 
+@import "shortcodes.less";
+@import "base.less";
+
 @import "homepage.less";
 @import "single.less";
-@import "attributes.less";
-@import "cli.less";
-
-
-// Patch all headers with an ID to be targets.
-h1, h2, h3, h4, h5, h6 {
-  &[id]:before {
-    display: block;
-    content: "";
-    height: 55px;
-    margin: -55px 0 0;
-  }
-}
-
-// Allow bootstrap tables through markdown.
-div.mdtable.table-striped > table {
-  .table;
-  .table-striped;
-}

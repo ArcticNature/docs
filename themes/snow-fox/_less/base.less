@@ -1,0 +1,22 @@
+// Patch all headers with an ID to be targets.
+h1, h2, h3, h4, h5, h6 {
+  &[id]:before {
+    display: block;
+    content: "";
+    height: 55px;
+    margin: -55px 0 0;
+  }
+}
+
+// Allow bootstrap tables through markdown.
+div.mdtable.table-striped > table {
+  .table;
+  .table-striped;
+}
+
+// Style manual TOC extentions.
+ul.cli-toc {
+  list-style: none;
+  margin-top: -10px;
+  padding-left: 3em;
+}
