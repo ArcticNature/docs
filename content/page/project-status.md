@@ -37,7 +37,7 @@ For the purpose of versioning, the public API of SnowFox is composed of:
 
   * The [command line]({{< relref "references/cli.md" >}}) options.
   * The configuration format.
-  * The [public protocol buffer]({{< relref "references/protobuf/public.md" >}}) API.
+  * The public protocol buffer API.
   * The plugin API.
   * The lifecycles steps.
 

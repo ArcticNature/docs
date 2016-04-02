@@ -17,3 +17,23 @@ Command line references
 The [Command Line Reference]({{< relref "references/cli.md" >}}) section
 is dedicated to the command line interfaces for the various binaries
 that form SnowFox.
+
+
+Protocol Buffers
+----------------
+Protocol Buffers [message]({{< relref "references/protobuf.md" >}})
+are used in four contexts in SnowFox:
+
+  * [Daemon/Manager]({{< relref "references/protobuf/daemon-manager.md" >}}) protocol.
+  * [Daemon/Spawner]({{< relref "references/protobuf/daemon-spawner.md" >}}) protocol.
+  * [Manager/Spawner]({{< relref "references/protobuf/manager-spawner.md" >}}) protocol.
+{{% draft %}}
+  * [Public]({{< relref "references/protobuf/public.md" >}}) protocol.
+
+
+Internals
+---------
+
+  * TODO: process forking model.
+
+{{% /draft %}}

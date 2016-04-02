@@ -15,12 +15,12 @@ title = "Install"
   **Do not use in production environments**.
 {{% /alert %}}
 
-<!--
+{{% draft %}}
 {{% alert info %}}
 Looking to get up and running fast so you can try things out?
-**Checkout the [Quick Start]({#{< relref "quick-start.md" >}}) guide!**
+**Checkout the [Quick Start]({{< relref "quick-start.md" >}}) guide!**
 {{% /alert %}}
--->
+{{% /draft %}}
 
 
 Install from source
