@@ -5,6 +5,7 @@ notoc = true
 
 [menu]
   [menu.nav_left]
+    identifier = "status"
     weight = 2
 +++
 
@@ -47,20 +48,19 @@ Road map
 
 {{% bootstrap-table "table-striped" %}}
 
-| Milestone estimate | Feature                    | Status  |
-| ------------------ | -------------------------- | ------- |
-| 0.0.1              | Event ids and correlation  | pending |
-| 0.0.2              | System state information   | pending |
-| 0.0.3              | Command Line Client        | pending |
-| 0.0.4              | System configuration       | pending |
-| 0.0.5              | Service registry           | pending |
-| 0.0.6              | Service load/list          | pending |
-| 0.0.7              | Service start/stop/status  | pending |
-| 0.0.8              | TCP connection support     | pending |
-| 0.0.9              | Client connects over tcp   | pending |
-| 0.0.10             | Cluster support            | pending |
-| 0.0.11             | Metadata storage           | pending |
-| 0.0.12             | `snow-fox-bootstrap`       | pending |
+| Milestone estimate | Feature                    | Status      |
+| ------------------ | -------------------------- | ----------- |
+| 0.0.2              | System state information   | in progress |
+| 0.0.3              | Command Line Client        | pending     |
+| 0.0.4              | System configuration       | pending     |
+| 0.0.5              | Service registry           | pending     |
+| 0.0.6              | Service load/list          | pending     |
+| 0.0.7              | Service start/stop/status  | pending     |
+| 0.0.8              | TCP connection support     | pending     |
+| 0.0.9              | Client connects over tcp   | pending     |
+| 0.0.10             | Cluster support            | pending     |
+| 0.0.11             | Metadata storage           | pending     |
+| 0.0.12             | `snow-fox-bootstrap`       | pending     |
 
 {{% /bootstrap-table %}}
 
@@ -72,3 +72,19 @@ This release cycle will be complete when service start, list,
 stop, and status are implemented.
 
 This will approximately be version `0.0.7`.
+
+Change log
+----------
+Change logs ...
+
+Boring for both authors and readers.
+Except for that one time you need it!
+
+The [change log]({{< relref "page/changelog.md" >}}) for SnowFox is an
+itemised list of things that changed and the version it changed in.
+
+{{% alert warning %}}
+While the change log is as accurate as possible, it is
+**not guaranteed to be complete**.  
+If you need such guarantee you may have to scavange the git logs.
+{{% /alert %}}

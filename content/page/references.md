@@ -37,3 +37,17 @@ Internals
   * TODO: process forking model.
 
 {{% /draft %}}
+
+
+Lifecycles
+----------
+Lifecycles are used to provide flexibility to SnowFox.
+A lifecycle is a well defined sequence of events, with optional parameters,
+which are triggered by parts of the system as it evolves.
+
+An example is the `process` lifecycle, which is a sequence of events
+that follows the lifetime of the SnowFox process.
+
+Checkout the
+[details and full list]({{< relref "references/lifecycles.md" >}})
+of lifecycles to learn more about them.
