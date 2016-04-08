@@ -194,3 +194,6 @@ Miscellaneous options.
 
 ### `--help`: show available options
 Print the list of available options and parameters and exits.
+
+### `--Version`: show version and exit
+Print the version of the binary and exits.

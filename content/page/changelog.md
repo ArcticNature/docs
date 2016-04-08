@@ -5,6 +5,10 @@ force_menu = "status"
 
 +++
 
+0.0.2
+-----
+- Print binary version and exit.
+
 0.0.1
 -----
 - Event ids and correlation ids.
