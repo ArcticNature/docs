@@ -7,7 +7,12 @@ force_menu = "status"
 
 0.0.2
 -----
+- Node name from command line.
+- Node name used in event ids.
 - Print binary version and exit.
+- Public protocol started.
+- Started cluster interface.
+- Status definition and helpers.
 
 0.0.1
 -----

@@ -4,7 +4,7 @@ force_menu = "ref"
 title = "Event Lifecycle"
 
 references = ["lifecycle"]
-references_weight = 1000
+references_weight = 1
 +++
 
 Extend and customise events as they move across SnowFox.
