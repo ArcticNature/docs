@@ -1,15 +1,11 @@
 +++
 date = "2016-04-01T23:28:11+01:00"
 force_menu = "ref"
-title = "Daemon/Manager ProtoBuf Reference"
+title = "Daemon/Manager Messages Reference"
 
-type = "index"
-layout = "summary"
-ref_name = "protobuf_dm"
 +++
 
-Full details of the Daemon to Manager (and vice versa)
-communion protocol.
+Below is the list of messages exchanged between the Daemon and the Manager:
 
 
 `Message::Code`
