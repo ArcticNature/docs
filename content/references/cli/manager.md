@@ -14,6 +14,18 @@ Logic unit of SnowFox, deals with user requests and system events.
 <!--more-->
 
 
+Cluster options
+---------------
+### `--node_name`: unique name of the node
+{{% attributes %}}
+{{% attribute Type String "" %}}
+{{% attribute Default node "" %}}
+{{% /attributes %}}
+
+Used to set the name for the node.
+Names must be unique within the cluster.
+
+
 Repository options
 ------------------
 Configuration repository related options.

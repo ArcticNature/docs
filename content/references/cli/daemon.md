@@ -65,6 +65,18 @@ When run in daemon mode, or when `--drop_privileges` is specified,
 the effective user is set to this option.
 
 
+Cluster options
+---------------
+### `--node_name`: unique name of the node
+{{% attributes %}}
+{{% attribute Type String "" %}}
+{{% attribute Default node "" %}}
+{{% /attributes %}}
+
+Used to set the name for the node.
+Names must be unique within the cluster.
+
+
 I/O options
 -----------
 Customise the processes Input/Output.
