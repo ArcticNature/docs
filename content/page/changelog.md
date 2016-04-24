@@ -7,6 +7,10 @@ force_menu = "status"
 
 0.0.2
 -----
+- Command line client started.
+- Fixed daemon termination with Ctrl+C in console mode.
+- Fixed undetected client disconnects.
+- LUA utility wrapper classes.
 - Node name from command line.
 - Node name used in event ids.
 - Print binary version and exit.
