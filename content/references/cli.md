@@ -20,7 +20,7 @@ process command line arguments.
 This is done to allow flexibility for the needs of the future
 focusing on the needs of the now and supporting backward compatibility.
 
-To accomplish this a special `--paerser` option is available.
+To accomplish this a special `--parser` option is available.
 Because this is processed before a parser for the command line is
 selected there are a few restrictions on this options:
 

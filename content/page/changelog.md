@@ -11,10 +11,12 @@ force_menu = "status"
 - Fixed daemon termination with Ctrl+C in console mode.
 - Fixed undetected client disconnects.
 - LUA utility wrapper classes.
+- Manual event source.
 - Node name from command line.
 - Node name used in event ids.
 - Print binary version and exit.
 - Public protocol started.
+- Scheduled event source.
 - Started cluster interface.
 - Status definition and helpers.
 
