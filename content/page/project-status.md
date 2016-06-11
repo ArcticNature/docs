@@ -50,9 +50,9 @@ Road map
 
 | Milestone estimate | Feature                    | Status      |
 | ------------------ | -------------------------- | ----------- |
-| 0.0.2              | System state information   | in progress |
-| 0.0.2              | Command Line Client        | in progress |
-| 0.0.3              | System configuration       | pending     |
+| 0.0.2              | System state information   | done        |
+| 0.0.2              | Command Line Client        | done        |
+| 0.0.3              | System configuration       | in progress |
 | 0.0.4              | Service registry           | pending     |
 | 0.0.5              | Service load/list          | pending     |
 | 0.0.6              | Service start/stop/status  | pending     |

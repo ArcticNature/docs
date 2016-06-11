@@ -15,39 +15,41 @@ package sf.core.protocol.public_api;
 
 enum Code {
   Ack = 1;
+  NodeInfoRequest  = 2;
+  NodeInfoResponse = 3;
+  Introduce = 4;
 }
 {{< /highlight >}}
 
 {{% bootstrap-table "table-striped" %}}
 
-| Name     | Code | Meaning                                         |
-| -------- | ---- | ----------------------------------------------- |
-| Ack      | 1    | This message is an acknowledgement of a request |
+| Name | Code | Meaning |
+| ---- | ---- | --------|
+| Ack  | 1    | Acknowledgement of a request |
+| NodeInfoRequest | 2 | Request information about the node |
+| NodeInfoResponse | 3 | Response to a NodeInfoRequest |
+| Introduce | 4 | A client is now connected |
 
 {{% /bootstrap-table %}}
 
 
-`StatusColour`
---------------
+`ClientIntroduce`
+-----------------
 {{< highlight proto >}}
-package sf.core.protocol.public_api;
+message ClientIntroduce {
+  required string client_id = 1;
 
-enum StatusColour {
-  Unkown = -1;
-  Green  = 0;
-  Yellow = 1;
-  Red    = 2;
+  extend Message {
+    optional ClientIntroduce msg = 52;
+  }
 }
 {{< /highlight >}}
 
 {{% bootstrap-table "table-striped" %}}
 
-| Name   | Code | Meaning                                          |
-| ------ | ---- | ------------------------------------------------ |
-| Unkown | -1   | The status of the system could not be determined |
-| Green  | 0    | The system is in the desired status              |
-| Yellow | 1    | The system is not in the desired status but it may not be an issue |
-| Red    | 2    | The system is in an undesired status             |
+| Name        | Type   | Description |
+| ----------- | ------ | ----------- |
+| `client_id` | string | Id for the client to use in future requests |
 
 {{% /bootstrap-table %}}
 
@@ -77,19 +79,34 @@ message NodeInfoRequest {
 ------------------
 {{< highlight proto >}}
 message NodeInfoResponse {
-  message SubSystem {
+  message NodeVersion {
+    required string commit  = 1;
+    optional string taint   = 2;
+    optional string version = 3;
+  }
+
+  message NodeInfo {
+    required string name = 1;
+    required NodeVersion version = 2;
+  }
+
+  message SystemStatus {
     required StatusColour colour = 1;
     required int64  code   = 2;
     required string reason = 3;
   }
 
-  required StatusColour colour = 1;
-  required int64  code   = 2;
-  required string reason = 3;
-  repeated SubSystem details = 4;
+  message SubSystem {
+    required string name = 1;
+    required SystemStatus status = 2;
+  }
+
+  optional NodeInfo node = 1;
+  optional SystemStatus overall = 2;
+  repeated SubSystem details = 3;
 
   extend Message {
-    optional NodeInfoResponse msg = 52;
+    optional NodeInfoResponse msg = 51;
   }
 }
 {{< /highlight >}}
@@ -98,13 +115,40 @@ message NodeInfoResponse {
 
 | Name     | Type  | Description |
 | -------- | ----- | ----------- |
-| `colour` | StatusColour | Overall health of the system |
-| `code`   | int64 | Code indicating the exact state of the system |
-| `reason`  | string | Human readable message to explain the code |
-| `details` | SubSystem | List of status information for subsystems |
+| `node.name` | string | Name of the node. |
+| `node.version.commit`  | string | Git commit the daemon was built from. |
+| `node.version.taint`   | string | Flag indicating the state of the git repo at build time. |
+| `node.version.version` | string | SemVer of the daemon. |
+| `overall` | SubSystem | Overall status information for the node. |
+| `details` | [SubSystem] | List of status information for subsystems. |
 
 {{% /bootstrap-table %}}
 
 Details on how
 [status is represented]({{< relref "references/advanced/status.md" >}})
 are described in an advanced referece section.
+
+
+`StatusColour`
+--------------
+{{< highlight proto >}}
+package sf.core.protocol.public_api;
+
+enum StatusColour {
+  Unkown = -1;
+  Green  = 0;
+  Yellow = 1;
+  Red    = 2;
+}
+{{< /highlight >}}
+
+{{% bootstrap-table "table-striped" %}}
+
+| Name   | Code | Meaning                                          |
+| ------ | ---- | ------------------------------------------------ |
+| Unkown | -1   | The status of the system could not be determined |
+| Green  | 0    | The system is in the desired status              |
+| Yellow | 1    | The system is not in the desired status but it may not be an issue |
+| Red    | 2    | The system is in an undesired status             |
+
+{{% /bootstrap-table %}}

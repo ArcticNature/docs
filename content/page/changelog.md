@@ -5,6 +5,17 @@ force_menu = "status"
 
 +++
 
+0.0.3
+-----
+- Client introduction.
+- Event contexts.
+- Lua interface to client API.
+- Lua interface to node API.
+- Manager's event registry.
+- Node status request.
+- Node status response.
+- Promised events.
+
 0.0.2
 -----
 - Command line client started.

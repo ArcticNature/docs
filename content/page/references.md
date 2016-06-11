@@ -19,6 +19,14 @@ is dedicated to the command line interfaces for the various binaries
 that form SnowFox.
 
 
+LUA interfaces
+--------------
+LUA is used different contexts across SnowFox:
+
+  * The [LUA client API]({{< relref "references/lua/client.md" >}}) is
+    what the user calls to run commands in the `snow-fox-client`.
+
+
 Protocol Buffers
 ----------------
 Protocol Buffers [messages]({{< relref "references/protobuf/messages.md" >}})
@@ -64,4 +72,5 @@ Advanced topics
 ---------------
 
   * [Representing status]({{< relref "references/advanced/status.md" >}}) of system and units alike.
+  * [Event based system]({{< relref "references/advanced/events.md" >}}): event interface and the run loop.
   * {{% draft %}}TODO: process forking model.{{% /draft %}}
