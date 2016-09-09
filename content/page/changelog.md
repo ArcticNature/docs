@@ -5,6 +5,14 @@ force_menu = "status"
 
 +++
 
+0.0.4
+-----
+- Initial configuration loading.
+- Node configuration loader.
+- Git backed repository.
+- Node configuration and example repo.
+- Return configuration version with node's status.
+
 0.0.3
 -----
 - Client introduction.

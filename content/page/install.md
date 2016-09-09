@@ -18,7 +18,7 @@ title = "Install"
 {{% draft %}}
 {{% alert info %}}
 Looking to get up and running fast so you can try things out?
-**Checkout the [Quick Start]({{< relref "quick-start.md" >}}) guide!**
+**Checkout the [Quick Start]({{< relref "page/quick-start.md" >}}) guide!**
 {{% /alert %}}
 {{% /draft %}}
 

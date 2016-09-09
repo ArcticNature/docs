@@ -50,17 +50,17 @@ Road map
 
 | Milestone estimate | Feature                    | Status      |
 | ------------------ | -------------------------- | ----------- |
-| 0.0.2              | System state information   | done        |
-| 0.0.2              | Command Line Client        | done        |
-| 0.0.3              | System configuration       | in progress |
-| 0.0.4              | Service registry           | pending     |
-| 0.0.5              | Service load/list          | pending     |
-| 0.0.6              | Service start/stop/status  | pending     |
-| 0.0.7              | TCP connection support     | pending     |
-| 0.0.8              | Client connects over tcp   | pending     |
-| 0.0.9              | Cluster support            | pending     |
+| 0.0.3              | System state information   | done        |
+| 0.0.3              | Command Line Client        | done        |
+| 0.0.4              | System configuration       | in progress |
+| 0.0.5              | Service registry           | pending     |
+| 0.0.6              | Service load/list          | pending     |
+| 0.0.7              | Service start/stop/status  | pending     |
+| 0.0.8              | TCP connection support     | pending     |
+| 0.0.9              | Client connects over tcp   | pending     |
 | 0.0.10             | Metadata storage           | pending     |
-| 0.0.11             | `snow-fox-bootstrap`       | pending     |
+| 0.1.0              | Cluster support            | pending     |
+| 0.1.1              | `snow-fox-bootstrap`       | pending     |
 
 {{% /bootstrap-table %}}
 

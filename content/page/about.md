@@ -25,6 +25,7 @@ I strongly encourage you to check them out!!!
 #### SnowFox core
 
   * [Google Flags](https://github.com/gflags/gflags): command line parsing for C/C++
+  * [LibGit2](https://libgit2.github.com/): portable, pure C implementation of the Git core methods.
   * [Lua](https://www.lua.org/): a powerful, fast, lightweight, embeddable scripting language.
   * [Ncurses](https://www.gnu.org/software/ncurses/): a software emulation of curses in System V Release 4.0 (SVr4), and more.
   * [Readline](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html):

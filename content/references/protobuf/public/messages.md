@@ -79,6 +79,11 @@ message NodeInfoRequest {
 ------------------
 {{< highlight proto >}}
 message NodeInfoResponse {
+  message ConfigVersion {
+    required string effective = 1;
+    required string symbolic  = 2;
+  }
+
   message NodeVersion {
     required string commit  = 1;
     optional string taint   = 2;
@@ -88,6 +93,7 @@ message NodeInfoResponse {
   message NodeInfo {
     required string name = 1;
     required NodeVersion version = 2;
+    optional ConfigVersion config = 3;
   }
 
   message SystemStatus {
