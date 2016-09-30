@@ -25,6 +25,8 @@ LUA is used different contexts across SnowFox:
 
   * The [LUA client API]({{< relref "references/lua/client.md" >}}) is
     what the user calls to run commands in the `snow-fox-client`.
+  * The [Node configuration]({{< relref "references/lua/node-config.md" >}})
+    is the LUA interface to a SnowFox node's configuration.
 
 
 Protocol Buffers

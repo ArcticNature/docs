@@ -5,13 +5,46 @@ force_menu = "status"
 
 +++
 
+Undetermined
+------------
+- TODO(stefano): Daemon and Spawner log through the manager.
+- TODO(stefano): Logger configuration.
+- TODO(stefano): Log level filtering.
+- TODO(stefano): Spawner and Daemon configuration.
+- TODO(stefano): Spawner and Daemon event manager.
+
+0.0.7
+-----
+- TODO(stefano): Service registry.
+
+0.0.6
+-----
+- TODO(stefano): TOPIC: Metadata storage
+- TODO(stefano): Metadata store model.
+- TODO(stefano): SQLite (local) metadata store.
+- TODO(stefano): Node metadata store.
+- TODO(stefano): Node metadata store configuration.
+
+0.0.5
+-----
+- TODO(stefano): TOPIC: Events refactoring.
+- TODO(stefano): Introduce `Reactor`s (to react to state change).
+- TODO(stefano): Refactor `EventSourceManager` to `IoManager`.
+- TODO(stefano): Introduce static `EventSource`s.
+- TODO(stefano): Refactor `EventDrain` to support buffering and async flushes.
+
 0.0.4
 -----
-- Initial configuration loading.
-- Node configuration loader.
+- Create/Migrate ScheduledSources during reconfig.
 - Git backed repository.
+- Initial configuration loading.
+- Migrate Managers's sources (spawner and daemon).
+- Migrate ManaualSource during reconfig.
 - Node configuration and example repo.
+- Node configuration loader.
 - Return configuration version with node's status.
+- ScheduledSource configuration.
+- Support event manager reconfiguration.
 
 0.0.3
 -----

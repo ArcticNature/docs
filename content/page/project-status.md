@@ -52,13 +52,14 @@ Road map
 | ------------------ | -------------------------- | ----------- |
 | 0.0.3              | System state information   | done        |
 | 0.0.3              | Command Line Client        | done        |
-| 0.0.4              | System configuration       | in progress |
-| 0.0.5              | Service registry           | pending     |
-| 0.0.6              | Service load/list          | pending     |
-| 0.0.7              | Service start/stop/status  | pending     |
-| 0.0.8              | TCP connection support     | pending     |
-| 0.0.9              | Client connects over tcp   | pending     |
-| 0.0.10             | Metadata storage           | pending     |
+| 0.0.4              | System configuration       | done        |
+| 0.0.5              | Events refactoring         | in progress |
+| 0.0.6              | Metadata storage           | pending     |
+| 0.0.7              | Service registry           | pending     |
+| 0.0.8              | Service load/list          | pending     |
+| 0.0.9              | Service start/stop/status  | pending     |
+| 0.0.10             | TCP connection support     | pending     |
+| 0.0.11             | Client connects over tcp   | pending     |
 | 0.1.0              | Cluster support            | pending     |
 | 0.1.1              | `snow-fox-bootstrap`       | pending     |
 
@@ -71,7 +72,7 @@ The topic for the next release is: <b>basic service commands</b>.
 This release cycle will be complete when service start, list,
 stop, and status are implemented.
 
-This will approximately be version `0.0.7`.
+This will approximately be version `0.0.9`.
 
 Change log
 ----------
