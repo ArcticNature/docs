@@ -5,6 +5,7 @@ force_menu = "status"
 
 +++
 
+{{% draft %}}
 Undetermined
 ------------
 - TODO(stefano): Daemon and Spawner log through the manager.
@@ -13,25 +14,28 @@ Undetermined
 - TODO(stefano): Spawner and Daemon configuration.
 - TODO(stefano): Spawner and Daemon event manager.
 
-0.0.7
+0.1.2
 -----
 - TODO(stefano): Service registry.
 
-0.0.6
+0.1.1
 -----
 - TODO(stefano): TOPIC: Metadata storage
 - TODO(stefano): Metadata store model.
 - TODO(stefano): SQLite (local) metadata store.
 - TODO(stefano): Node metadata store.
 - TODO(stefano): Node metadata store configuration.
+{{% /draft %}}
 
-0.0.5
+0.1.0
 -----
-- TODO(stefano): TOPIC: Events refactoring.
+- TOPIC: Events refactoring.
 - TODO(stefano): Introduce `Reactor`s (to react to state change).
 - TODO(stefano): Refactor `EventSourceManager` to `IoManager`.
 - TODO(stefano): Introduce static `EventSource`s.
 - TODO(stefano): Refactor `EventDrain` to support buffering and async flushes.
+- Add failure documentation.
+- Quick access to full reference pages.
 
 0.0.4
 -----

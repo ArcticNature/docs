@@ -18,7 +18,7 @@ title = "Install"
 {{% draft %}}
 {{% alert info %}}
 Looking to get up and running fast so you can try things out?
-**Checkout the [Quick Start]({{< relref "page/quick-start.md" >}}) guide!**
+**Checkout the [Quick Start]({{< relref "quick-start.md" >}}) guide!**
 {{% /alert %}}
 {{% /draft %}}
 
@@ -33,23 +33,21 @@ There are (at least) two compilactions with this:
     may not be an option.
   * If all features are implemented from scratch inside SnowFox itself
     the codebase would become so complex that it would be impossible to
-    maintain and evolve.
+    maintain and evolve (and it would take so much time).
 
 So SnowFox has a different approach to most features: if there is an open
 source solution that already implements what we need, integrate with it
 instead of rebuilding it.
 
 **As a result installing SnowFox is not just about SnowFox.**
-Some systems (like [etcd](https://coreos.com/etcd/)) are required to run
-SnowFox while others (like [PowerDNS](https://www.powerdns.com/index.html))
-are required only for some features and SnowFox will be able to start
-and be used even without them.
+Some systems (like a KeyValue storage for Metadata) are required to run
+SnowFox while others (like a DNS server for services) are required only for
+some features and SnowFox will be able to start and function without them.
 
 ### Steps
 These are the steps required to install and run a SnowFox cluster:
 
-  1. (Needed for cluster support, not yet relevant)
-     Install and start an etcd cluster: https://coreos.com/etcd/docs/latest/clustering.html
+  1. Install a metadata store (TODO).
   2. Install SnowFox following the instructions below.
   3. Create a configuration repository (clone and customise the default one:
      https://github.com/ArcticNature/default-config )

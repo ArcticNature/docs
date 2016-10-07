@@ -1,12 +1,15 @@
 +++
 date = "2016-04-03T10:24:12+01:00"
-force_menu = "ref"
 title = "Lifecycles Reference"
 
 type = "index"
 layout = "summary"
 ref_name = "lifecycle"
 
+[menu]
+  [menu.nav_right]
+    parent = "ref"
+    weight = 2
 +++
 
 Part of the flexibility and extensibility of SnowFox comes from Lifecycles.

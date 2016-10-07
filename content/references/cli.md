@@ -1,12 +1,15 @@
 +++
 date = "2016-03-25T16:51:30Z"
-force_menu = "ref"
 title = "Command Line Reference"
 
 type = "index"
 layout = "summary"
 ref_name = "cli"
 
+[menu]
+  [menu.nav_right]
+    parent = "ref"
+    weight = 0
 +++
 
 SnowFox is built out of many binareis and tools.

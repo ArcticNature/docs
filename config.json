@@ -22,6 +22,7 @@
    },
 
    "taxonomies": {
+     "pageset": "pagesets",
      "reference": "references"
    },
 

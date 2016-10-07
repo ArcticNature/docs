@@ -75,4 +75,4 @@ Advanced topics
 
   * [Representing status]({{< relref "references/advanced/status.md" >}}) of system and units alike.
   * [Event based system]({{< relref "references/advanced/events.md" >}}): event interface and the run loop.
-  * {{% draft %}}TODO: process forking model.{{% /draft %}}
+  {{% draft %}}* TODO: process forking model.{{% /draft %}}

@@ -53,15 +53,15 @@ Road map
 | 0.0.3              | System state information   | done        |
 | 0.0.3              | Command Line Client        | done        |
 | 0.0.4              | System configuration       | done        |
-| 0.0.5              | Events refactoring         | in progress |
-| 0.0.6              | Metadata storage           | pending     |
-| 0.0.7              | Service registry           | pending     |
-| 0.0.8              | Service load/list          | pending     |
-| 0.0.9              | Service start/stop/status  | pending     |
-| 0.0.10             | TCP connection support     | pending     |
-| 0.0.11             | Client connects over tcp   | pending     |
-| 0.1.0              | Cluster support            | pending     |
-| 0.1.1              | `snow-fox-bootstrap`       | pending     |
+| 0.1.0              | Events refactoring         | in progress |
+| 0.1.1              | Metadata storage           | pending     |
+| 0.1.2              | Service registry           | pending     |
+| 0.1.3              | Service load/list          | pending     |
+| 0.1.4              | Service start/stop/status  | pending     |
+| 0.1.5              | TCP connection support     | pending     |
+| 0.1.6              | Client connects over tcp   | pending     |
+| 0.2.0              | Cluster support            | pending     |
+| 0.2.1              | `snow-fox-bootstrap`       | pending     |
 
 {{% /bootstrap-table %}}
 
@@ -72,7 +72,7 @@ The topic for the next release is: <b>basic service commands</b>.
 This release cycle will be complete when service start, list,
 stop, and status are implemented.
 
-This will approximately be version `0.0.9`.
+This will approximately be version `0.1.4`.
 
 Change log
 ----------
@@ -81,7 +81,7 @@ Change logs ...
 Boring for both authors and readers.
 Except for that one time you need it!
 
-The [change log]({{< relref "page/changelog.md" >}}) for SnowFox is an
+The [change log]({{< relref "changelog.md" >}}) for SnowFox is an
 itemised list of things that changed and the version it changed in.
 
 {{% alert warning %}}

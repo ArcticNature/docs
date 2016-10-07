@@ -34,6 +34,17 @@
 
             <div class="hidden-xs hidden-sm col-md-3">
               {{ .TableOfContents }}
+
+              <!-- Extend TOC with items added to the Scratch -->
+              <ul class="cli-toc">
+                {{ range ($.Scratch.Get "DynamicToc") }}
+                <li>
+                  <a href="#{{ .UniqueID }}">
+                    {{ .LinkTitle }}
+                  </a>
+                </li>
+                {{ end }}
+              </ul>
             </div> <!-- .hidden-xs.hidden-sm.col-md-3 -->
             {{ end }}
 
