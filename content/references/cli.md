@@ -3,8 +3,7 @@ date = "2016-03-25T16:51:30Z"
 title = "Command Line Reference"
 
 type = "index"
-layout = "summary"
-ref_name = "cli"
+layout = "cli"
 
 [menu]
   [menu.nav_right]

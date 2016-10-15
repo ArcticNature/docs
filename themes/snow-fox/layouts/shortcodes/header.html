@@ -1,0 +1,6 @@
+{{ $size := or (.Get "size") 1 -}}
+{{ $text := or (.Get "text") "Text not provided" -}}
+<h{{ $size }}>
+  {{ $text }}
+  <small>{{ .Inner }}</small>
+</h{{ $size }}>

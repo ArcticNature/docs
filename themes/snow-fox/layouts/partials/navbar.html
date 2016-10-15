@@ -38,9 +38,11 @@
               <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
+            {{ if .URL }}
             <li class="{{if $active}}active{{end}}">
               <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
+            {{ end }}
             {{ range .Children }}
             {{ $active := $page.IsMenuCurrent "nav_left" . }}
             <li class="{{if $active}}active{{end}}">
@@ -74,9 +76,11 @@
               <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
+            {{ if .URL }}
             <li class="{{if $active}}active{{end}}">
               <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
+            {{ end }}
             {{ range .Children }}
             {{ $active := $page.IsMenuCurrent "nav_right" . }}
             <li class="{{if $active}}active{{end}}">

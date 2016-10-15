@@ -14,27 +14,47 @@ Undetermined
 - TODO(stefano): Spawner and Daemon configuration.
 - TODO(stefano): Spawner and Daemon event manager.
 
-0.1.2
+0.1.3
 -----
 - TODO(stefano): Service registry.
 
-0.1.1
+0.1.2
 -----
 - TODO(stefano): TOPIC: Metadata storage
 - TODO(stefano): Metadata store model.
 - TODO(stefano): SQLite (local) metadata store.
 - TODO(stefano): Node metadata store.
 - TODO(stefano): Node metadata store configuration.
+
+0.1.1
+-----
+- TODO(stefano): TOPIC: metircs.
+- TODO(stefano): Define a Metrics interface.
+- TODO(stefano): Create backends to collect and expose metrics.
+- TODO(stefano): Allow configuration of metrics.
+- TODO(stefano): Count registered sources and drains.
+- TODO(stefano): Count `Event`s by type and correlation id.
+- TODO(stefano): Count configuration reloads.
+- TODO(stefano): Count errors.
 {{% /draft %}}
 
 0.1.0
 -----
 - TOPIC: Events refactoring.
-- TODO(stefano): Introduce `Reactor`s (to react to state change).
-- TODO(stefano): Refactor `EventSourceManager` to `IoManager`.
+- TODO(stefano): `Context` static methods to uppercase (lowercase for instance version).
+- TODO(stefano): Refactor `Event` error handling with `std::exception_ptr`.
+- TODO(stefano): Refactor `EventSourceManager` to `LoopManager`.
 - TODO(stefano): Introduce static `EventSource`s.
 - TODO(stefano): Refactor `EventDrain` to support buffering and async flushes.
-- Add failure documentation.
+- TODO(stefano): Introduce promises for continued work.
+- TODO(stefano): Handle global promise failures by re-thworing them in the run loop.
+- TODO(stefano): Create a `PromiseCollection` in the static context.
+- TODO(stefano): Add a `close` promise to sources and drains.
+- TODO(stefano): Rework connected sources and drains to use promises.
+- TODO(stefano): Deprecate `EventContext`s.
+- TODO(stefano): Allow blocking of `snow-fox-cli` interpreter.
+- Add failure modes documentation.
+- Add glossary page to documentation.
 - Quick access to full reference pages.
 
 0.0.4

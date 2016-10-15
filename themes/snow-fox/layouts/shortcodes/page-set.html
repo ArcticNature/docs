@@ -3,13 +3,12 @@
 
 {{ range $pages }}
 {{ $itemID := delimit (slice $pageset .Page.UniqueID) "-" -}}
-{{ $tocItem := dict "UniqueID" $itemID "LinkTitle" .Page.LinkTitle "PageSet" $pageset -}}
-{{ $.Page.Scratch.Add "DynamicToc" (slice $tocItem) -}}
-
 <div class="pageset-block">
   <h2 id="{{ $itemID }}">
     <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
   </h2>
-  <p>{{ .Page.Summary }}</p>
+  <p>{{ .Page.Params.description | markdownify }}</p>
 </div>
+{{ $tocItem := dict "UniqueID" $itemID "LinkTitle" .Page.LinkTitle "PageSet" $pageset -}}
+{{ $.Page.Scratch.Add "DynamicToc" (slice $tocItem) -}}
 {{ end }}

@@ -28,6 +28,8 @@ I strongly encourage you to check them out!!!
   * [LibGit2](https://libgit2.github.com/): portable, pure C implementation of the Git core methods.
   * [Lua](https://www.lua.org/): a powerful, fast, lightweight, embeddable scripting language.
   * [Ncurses](https://www.gnu.org/software/ncurses/): a software emulation of curses in System V Release 4.0 (SVr4), and more.
+  * [PoolQueue](https://github.com/rhashimoto/poolqueue): C++ Asynchronous Promises, inspired by [Promises/A+](https://promisesaplus.com/).
+  * [Protocol Buffers](https://developers.google.com/protocol-buffers/): a mechanism for serializing structured data.
   * [Readline](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html):
     provides a set of functions for use by applications that allow
     users to edit command lines as they are typed in.

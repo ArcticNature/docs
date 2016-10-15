@@ -1,6 +1,6 @@
 +++
 date = "2016-10-06T19:41:12+01:00"
-title = "Failure scenarios"
+title = "Failure modes"
 
 [menu]
   [menu.nav_right]

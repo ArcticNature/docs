@@ -14,6 +14,10 @@
 
    "menu": {
      "nav_right": [{
+       "identifier": "ref",
+       "name": "Full References",
+       "weight": 0
+     },{
        "name": "GitHub",
        "pre": "<i class='fa fa-github'></i>",
        "url": "https://github.com/ArcticNature/snow-fox",
