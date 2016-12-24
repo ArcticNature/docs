@@ -3,8 +3,7 @@ date = "2016-04-03T10:24:12+01:00"
 title = "Lifecycles Reference"
 
 type = "index"
-layout = "summary"
-ref_name = "lifecycle"
+layout = "lifecycle"
 
 [menu]
   [menu.nav_right]
@@ -45,13 +44,9 @@ class ExampeInitHandler : public BaseLifecycleHandler {
     // Some code that needs to run when the process starts.
   }
 };
-
+LifecycleStaticOn("process::init", ExampeInitHandler);
 
 int main() {
-  // Register the handler.
-  LifecycleHandlerRef handler(new ExampeInitHandler());
-  Lifecycle::on("process::init", handler);
-
   // Some init logic ...
 
   // Trigger the `process::init` event.

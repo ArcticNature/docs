@@ -54,11 +54,11 @@ Road map
 | 0.0.3              | Command Line Client        | done        |
 | 0.0.4              | System configuration       | done        |
 | 0.1.0              | Events refactoring         | in progress |
-| 0.1.1              | Metrics collection         | pending     |
-| 0.1.2              | Metadata storage           | pending     |
-| 0.1.3              | Service registry           | pending     |
-| 0.1.4              | Service load/list          | pending     |
-| 0.1.5              | Service start/stop/status  | pending     |
+| 0.1.1              | Metadata storage           | pending     |
+| 0.1.2              | Service registry           | pending     |
+| 0.1.3              | Service load/list          | pending     |
+| 0.1.4              | Service start/stop/status  | pending     |
+| 0.1.5              | Metrics collection         | pending     |
 | ?????              | TCP connection support     | pending     |
 | ?????              | Client connects over tcp   | pending     |
 | ?????              | Cluster support            | pending     |

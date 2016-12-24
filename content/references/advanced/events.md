@@ -62,32 +62,8 @@ entire SnowFox node in the presence of small or even transient errors.
 The eventual consistency nature of SnowFox will retry failed tasks later.
 
 The sequence of events generally goes as follows:
-```text
-+-------------+ +-------------+ +------------+
-| EventSource | | EventSource | | EventDrain |
-|   (parse)   | |   (parse)   | |  (flush)   |
-+-------------+ +-------------+ +------------+
-      \               |               /   ^
-       \______________|______________/    |
-                      V                   |
-                  +-------+               |
-                  | Event |---------------/
-                  +-------+
-                   |     |
-                   X     X
-                   |     |
-                   V     V
-   +----------------+   +-------------+
-   | AbortException |   |    Other    |
-   | CleanExit      |   | SfException |
-   +----------------+   +-------------+
-            |                  |
-            V                  V
-+-------------------+   +-------------------+
-| (Critical) System |   | Ignore and repeat |
-|    termination    |   +-------------------+
-+-------------------+
-```
+{{< figure src="/references/advanced/loop.svg"
+           alt="Drains hierarchy" >}}
 
 
 The `LoopManager`
@@ -148,6 +124,60 @@ but some should, depening on what they are:
 The sources that need to survive configuration reloads are stored
 in the static context while the sources that are replaced by a
 configuration reload are stored in the dynamic context.
+
+
+Core Hierarchies
+----------------
+The following hierarchies are defined by core components and are
+the building blocks of other classes and components.
+
+### Drains
+{{< figure src="/references/advanced/drains.svg"
+           alt="Drains hierarchy" >}}
+
+Remeber that these are **not** all possible drains but
+only those provided by core components:
+
+  * `EventDrain`: The base drain definition.
+  * `NullDrain`: A special drain that ignores all data.
+  * `BoundDrain`: A drain bound to a signle `EventSourceRef`.
+  * `ProtoBufDrain`: A drain to send protobuf messages.
+  * `Daemon*Drain`:
+    A group of drains to send messages to the daemon
+    (from spawner and manager).
+  * `Manager*Drain`:
+    A group of drains to send messages to the manager
+    (from spawner and daemon).
+  * `Spawner*Drain`:
+    A group of drains to send messages to the spaner
+    (from manager and daemon).
+  * `PublicDrain`: The drain to send messages to clients.
+
+### Sources
+{{< figure src="/references/advanced/sources.svg"
+           alt="Sources hierarchy" >}}
+
+Remeber that these are **not** all possible sources but
+only those provided by core components:
+
+  * `EventSource`: The base source definition.
+  * `ManualSource`: A source that emits `EventRef`s added by the system.
+  * `ReadlineSource`: A source that emits strings read with `readline`.
+  * `SchedulerSource`: A source that emits `EventRef`s on a timer.
+  * `SignalSource`: A source that emits events based on signals.
+  * `BoundSource`: A source bound to a signle `EventDrainRef`.
+  * `ProtoBufSource`: A source to read protobuf messages.
+  * `Daemon*Source`:
+    A group of sources to read messages from the daemon
+    (to spawner and manager).
+  * `Manager*Source`:
+    A group of sources to read messages from the manager
+    (to spawner and daemon).
+  * `Spawner*Source`:
+    A group of sources to read messages from the spaner
+    (to manager and daemon).
+  * `PublicSource`: The source to read messages from clients.
+
 
 Sharing state
 -------------

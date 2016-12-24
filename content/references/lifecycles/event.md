@@ -11,9 +11,18 @@ Extend and customise events as they move across SnowFox.
 <!--more-->
 
 
+`DrainEnqueueArg`
+-----------------
+Passed to `event::drain::enqueue` events to provide access to:
+
+  * `void add()`: Marks the drain as added to the loop manager.
+  * `bool added()`: returns `false` if the drain was already in the loop manager.
+  * `std::string drain()`: Returns the id of the drain that triggered the event.
+
+
 {{% draft %}}
 `EventErrorLifecycleArg`
--------------------
+------------------------
 The `EventErrorLifecycleArg` is a `BaseLifecycleArg` that stores
 a reference to an `Event` instance and an exception.
 It is used to pass arguments to `event::error`.
@@ -29,7 +38,7 @@ It is passed to `event::*` lifecycle events that require an
 
 
 `event::_identify`
------------------
+------------------
 A special step in the lifecycle of an event that is triggered
 just after an event is created but before the `event::initialise`
 step.
@@ -42,6 +51,13 @@ The `Event` reference to operate on is passed to the handler in an
 Every component that instantiates an object should use the
 `sf::core::lifecycle::EventLifecycle::Init` method to ensure the
 event is initialised correctly.
+
+
+`event::drain::enqueue`
+-----------------------
+Triggered by EventDrains when data is enqueued to be sent.
+Used to automatically add drains that need to be flushed to the
+current `LoopManager` and to keep track of enqueue operations.
 
 
 `event::initialise`

@@ -2,8 +2,8 @@
 #  Render graphs written in dot files.
 
 
-DATA="docs/data"
-STATIC="docs/static"
+DATA="./data"
+STATIC="./static"
 
 
 dot_svg() {
@@ -15,4 +15,6 @@ dot_svg() {
 }
 
 
-#dot_svg "references/flows/services/stop.dot"
+dot_svg "references/advanced/drains.dot"
+dot_svg "references/advanced/loop.dot"
+dot_svg "references/advanced/sources.dot"

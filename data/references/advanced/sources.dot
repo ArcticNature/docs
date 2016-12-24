@@ -1,0 +1,30 @@
+graph sources {
+  size="8";
+
+  base [label="EventSource"];
+  bound [label="BoundSource"];
+  protobuf [label="ProtoBufSource"];
+
+  manual [label="ManualSource", shape=box];
+  readline [label="ReadlineSource", shape=box];
+  sched [label="SchedulerSource", shape=box];
+  signal [label="SignalSource", shape=box];
+
+  daemon [label="Daemon*Source", shape=box];
+  manager [label="Manager*Source", shape=box];
+  spawner [label="Spawner*Source", shape=box];
+  public [label="PublicSource", shape=box];
+
+  base -- manual;
+  base -- readline;
+  base -- sched;
+  base -- signal;
+
+  base -- bound;
+  bound -- protobuf;
+
+  protobuf -- daemon;
+  protobuf -- manager;
+  protobuf -- spawner;
+  protobuf -- public;
+}

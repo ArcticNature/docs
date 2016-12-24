@@ -1,0 +1,20 @@
+graph drains {
+  base [label="EventDrain"];
+  null [label="NullDrain"];
+  bound [label="BoundDrain"];
+
+  protobuf [label="ProtoBufDrain"];
+  daemon [label="Daemon*Drain", shape=box];
+  manager [label="Manager*Drain", shape=box];
+  spawner [label="Spawner*Drain", shape=box];
+  public [label="PublicDrain", shape=box];
+
+  base -- null;
+  base -- bound;
+  bound -- protobuf;
+
+  protobuf -- daemon;
+  protobuf -- manager;
+  protobuf -- spawner;
+  protobuf -- public;
+}

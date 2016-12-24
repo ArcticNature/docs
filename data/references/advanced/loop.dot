@@ -1,0 +1,32 @@
+digraph loop {
+  src1 [label="EventSource\n(parse)", shape=box];
+  src2 [label="EventSource\n(parse)", shape=box];
+  drain [label="EventDrain\n(flush)", shape=box];
+
+  enqueue [label="EventDrain\n(enqueue)", shape=box];
+  event [label="Event"];
+  loop [label="LoopManager"];
+
+  critical [label="AbortException\nCleanExit", shape=box];
+  error [label="Other\nSfException", shape=box];
+  ignore [label="Ignore"];
+  terminate [label="(Critical) System\ntermination", shape=box];
+
+  src1 -> loop [label="1"];
+  src2 -> loop [label="1"];
+
+  loop -> drain [label="5a"];
+  drain -> loop [label="6a"];
+  loop -> event [label="2"];
+  event -> enqueue [label="3a"];
+  enqueue -> loop [label="4a"];
+
+  edge [color=red];
+  event -> critical [label="3b"];
+  event -> error [label="3c"];
+
+  edge [color=black];
+  critical -> terminate [label="4b"];
+  error -> ignore [label="4c"];
+  ignore -> loop [label="5c"];
+}

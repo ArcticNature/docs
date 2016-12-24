@@ -57,5 +57,8 @@ mkdir -p themes/snow-fox/static/css
 lessc --relative-urls themes/snow-fox/_less/core.less \
   > themes/snow-fox/static/css/core.css
 
+# Build graphs.
+_build/graphs
+
 # Build site.
 hugo --destination "${DEST}" ${EXTRA_ARGS} || exit 1

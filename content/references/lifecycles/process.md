@@ -27,7 +27,6 @@ In one of the component's source files, add the following code:
 {{< highlight "c++" >}}
 using sf::core::interface::BaseLifecycleHandler;
 using sf::core::interface::BaseLifecycleArg;
-using sf::core::lifecycle::Process;
 
 class MyModuleInitialiser : public BaseLifecycleHandler {
  public:
@@ -35,8 +34,7 @@ class MyModuleInitialiser : public BaseLifecycleHandler {
     // Initialisation code here ...
   }
 }
-
-Process::Initialiser<MyModuleInitialiser> my_module_initialiser;
+LifecycleStaticOn("process::init", MyModuleInitialiser);
 {{< /highlight >}}
 
 {{% alert "danger" %}}
