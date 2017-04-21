@@ -1,5 +1,5 @@
 +++
-date = "2016-04-07T22:18:41+01:00"
+date = "2017-04-21T18:20:41+01:00"
 title = "Change log"
 force_menu = "status"
 
@@ -19,17 +19,21 @@ Undetermined
                  components interaction).
 - TODO(stefano): Group event id and cor_id in EventTracer objects.
 - TODO(stefano): Implement and use `EventTracer.attach(Event)`.
+- TODO(stefano): Use promeses in `snow-fox-cli` interpreter.
+- TODO(stefano): Upgrade to latest hugo.
 
 0.1.5
 -----
-- TODO(stefano): TOPIC: metircs.
-- TODO(stefano): Define a Metrics interface.
+- TODO(stefano): TOPIC: Prometheus metircs.
 - TODO(stefano): Create backends to collect and expose metrics.
 - TODO(stefano): Allow configuration of metrics.
 - TODO(stefano): Count registered sources and drains.
 - TODO(stefano): Count `Event`s by type and correlation id.
 - TODO(stefano): Count configuration reloads.
 - TODO(stefano): Count errors.
+- TODO(stefano): Gauge pending promeses.
+- TODO(stefano): Gauge event sources.
+- TODO(stefano): Gauge event drain.
 
 0.1.4
 -----
@@ -47,30 +51,27 @@ Undetermined
 -----
 - TODO(stefano): TOPIC: Metadata storage
 - TODO(stefano): Metadata store model.
-- TODO(stefano): SQLite (local) metadata store.
+- TODO(stefano): JSON local FS metadata store.
 - TODO(stefano): Node metadata store.
 - TODO(stefano): Node metadata store configuration.
+- TODO(stefano): Add top level reference menu for users and developers.
+- TODO(stefano): Start dev tools with a docker image builder.
 {{% /draft %}}
 
 0.1.0
 -----
-- TOPIC: Events refactoring.
-- TODO(stefano): Introduce promises for events (close/error).
-- TODO(stefano): Reimplement connected sources.
-- TODO(stefano): Introduce static `EventSource`s.
-- TODO(stefano): Introduce promises for continued work.
-- TODO(stefano): Handle global promise failures by re-thworing them in the run loop.
-- TODO(stefano): Create a `PromiseCollection` in the static context.
-- TODO(stefano): Add a `close` promise to sources and drains.
-- TODO(stefano): Rework connected sources and drains to use promises.
-- TODO(stefano): Deprecate `EventContext`s.
-- TODO(stefano): Allow blocking of `snow-fox-cli` interpreter.
-- TODO(stefano): Re-work drains/sources hierarchy to match docs.
+_Topic_: Events refactoring.
+
 - Add failure modes documentation.
 - Add glossary page to documentation.
 - All writes use flush instead of FDs.
 - `Context` static methods to uppercase (lowercase for instance version).
+- Create a `PromiseKeeper` and add to static context.
+- Exceptions inherit from `std::runtime_error`.
+- Handle global promise failures by re-thworing them in the run loop.
 - Implement `Buffer`s for drains buffering system.
+- Introduce hooks with functors and static types.
+- Introduce promeses.
 - Make Drain and Source FD accessible to LoopManagers only.
 - Move FD check to new `core.utility.net`.
 - Quick access to full reference pages.
@@ -79,6 +80,7 @@ Undetermined
 - Refactor `EventSource` to improve interface.
 - Refactor `EventSourceManager` to `LoopManager`.
 - Refactor `MessageIO::send` to use drains instead of fds.
+- SheduledSource to tick promise keeper.
 - Use lifecycles to auto-add drains with data.
 
 0.0.4

@@ -50,11 +50,8 @@ Road map
 
 | Milestone estimate | Feature                    | Status      |
 | ------------------ | -------------------------- | ----------- |
-| 0.0.3              | System state information   | done        |
-| 0.0.3              | Command Line Client        | done        |
-| 0.0.4              | System configuration       | done        |
-| 0.1.0              | Events refactoring         | in progress |
-| 0.1.1              | Metadata storage           | pending     |
+| 0.1.0              | Events refactoring         | done        |
+| 0.1.1              | Metadata storage           | in progress |
 | 0.1.2              | Service registry           | pending     |
 | 0.1.3              | Service load/list          | pending     |
 | 0.1.4              | Service start/stop/status  | pending     |
@@ -88,5 +85,19 @@ itemised list of things that changed and the version it changed in.
 {{% alert warning %}}
 While the change log is as accurate as possible, it is
 **not guaranteed to be complete**.  
-If you need such guarantee you may have to scavange the git logs.
+If you need such guarantee you may have to scavenge the git logs.
 {{% /alert %}}
+
+Technical debt
+--------------
+A hated name for a useful concept: there are some things already that
+need to change!
+
+At first I tried to identify what needs to be changed and how to make it
+better then the result needed to be made better again ...
+
+Well it is decided now: progress must be made and where the problems
+become clear and concrete they can be reasoned about and fixed.
+
+The [tech log]({{< relref "techlog.md" >}}) lists the areas that
+need work and why they need it.

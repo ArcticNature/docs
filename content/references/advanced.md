@@ -27,6 +27,15 @@ A look at how the SnowFox process works.
 {{% /draft %}}
 
 ## R
+{{% draft %}}
+### Remote Procedure calls
+As SnowFox is a distributed, asynchronous, software it makes extensive use of
+Remote Procedure Calls (RPCs).
+
+The RPC framework provides a standard way to exchange messages over a variety
+of protocols (unix socket, HTTP, NATS, ...) transparently.
+{{% /draft %}}
+
 ### [Representing status]({{< relref "references/advanced/status.md" >}})
 This page describes how status of system and units alike is
 represented in SnowFox and exposed by the API.

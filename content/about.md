@@ -16,6 +16,15 @@ Metadata
   * Latest updates and roadmap: [See this page]({{< relref "project-status.md" >}}).
   * Meaning of the version number: [Almost SemVer]({{< relref "project-status.md#version-number" >}}).
 
+Licensing
+---------
+SnowFox as a whole is licensed as documented above.
+
+When SnowFox or one of its dependencies uses a GPL-licensed module,
+the final result can be licensed under SnowFox's license above instead.
+
+See https://www.gnu.org/licenses/gpl-faq.en.html#GPLModuleLicense for details.
+
 
 Acknowledgements
 ----------------
