@@ -28,6 +28,9 @@ while [ "$#" -ne 0 ]; do
 
     --target)
       TARGET=$1
+      if [ "${TARGET}" == "debug" ]; then
+        EXTRA_ARGS="${EXTRA_ARGS} --buildDrafts"
+      fi
       shift
       ;;
 
