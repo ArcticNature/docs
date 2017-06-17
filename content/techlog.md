@@ -15,11 +15,17 @@ to the endless list of ideas I have in mind.
 
 To change this I have acepted that sometime it is best to compromise
 by implementing something knowing that it will need to change at some
-point but without uet knowing how that will have to look like.
+point but without yet knowing how that will have to look like.
 
 This page is therefore here to keep track of what needs to be
 improved, re-worked or re-done and what the limits/problems
-at the moment that needs to be addressed.
+that needs to be addressed are at the moment.
+
+
+Command line parser
+-------------------
+Look at https://github.com/jarro2783/cxxopts as a CLI parser
+to drop GFLAGS or at least use it to restructure the interface.
 
 
 Components tree
@@ -45,6 +51,28 @@ socket should be reused.
 
 The first problem can be solved with promises and making the
 verify and apply stages to become promeses.
+
+The second problem can be addressed with the introduction of
+connection pools (even though they mainly address a different problem):
+
+  * Connection pools track connections, with the help of connection factories.
+  * Connection factories have a hash that reflect parameter such as
+    * Protocol (tcp/udp/unix).
+    * Role (listener/connection).
+    * Local/remote address.
+    * Local/remote port.
+    * Any other option that require replacement on reconfig.
+  * Connection pools expose that hash to the configuration layer.
+
+Reconfiguration of such resources then proceeds as follow:
+
+  1. A new connection factory and pool are created based on the new config
+     (but no connection is actually created for the pool).
+  2. The connection pool is used to generate the hash.
+  3. The hash for the matching active connection pool is looked up.
+  4. The hash of the new and current pools are compared:
+    * If they match the old pool is used for reconfiguration
+    * If they do not the newly created pool is used.
 
 
 Context
@@ -80,6 +108,30 @@ hit several limits:
 Replace home-grown system with libevent instead?
 
 
+Fuzz testing
+------------
+Read about the topic and introduce https://github.com/google/oss-fuzz
+to find bugs and securty issues.
+
+
+LUA redesign
+------------
+The `core.utility.lua` package was "designed" to map the C API onto C++.
+Reconsider the entire design by starting with use patterns first.
+Pay particular attention to:
+
+  * Better support for custom types.
+  * GC managed shared pointers.
+  * Support for corutines (will be needed to support async operations).
+
+Skim through existing libraries and consider using one (at least for design):
+
+  * https://github.com/jeremyong/Selene
+  * http://www.jeremyong.com/blog/2014/01/10/interfacing-lua-with-templates-in-c-plus-plus-11/
+  * https://github.com/ThePhD/sol2/
+  * https://github.com/AdUki/LuaState
+
+
 Module Initialization
 ---------------------
 Currently requires to force inclusion of all symbols.
@@ -94,6 +146,25 @@ Need to find a better way to deal with that.
 Could use hooks to make init call nicer (can use labda instead of classes)
 but I still need to figure out how to "force" inclusion of the symbol
 if no header or source file are directly referenced.
+
+
+Option objects
+--------------
+Option objects were introduced to allow components to store basic types
+in different contexts (`Static`, `CLIParser`, ...).
+
+They make the code extremely difficult to read and
+they are difficult to maintain:
+
+  * What keys are set?
+  * Where are they set?
+  * Where are they used?
+  * Who is in charge of which keys?
+
+As we already have static and dynamic contexts plus other forms of
+state information (active `Logger` and `Cluster` instance) try to remove
+these generic containers and replace whatever is needed with fixed
+attributes/methods provided by other components.
 
 
 Posix Interface

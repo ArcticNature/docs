@@ -18,16 +18,13 @@ presented in a consistent way.
 
 Status information is formed of two bits:
 
-  * Traffic light overview:
+  * A human readable message with the reason for the status.
+  * A traffic light indicator:
     * Red: the unit is confirmed to be in an undesired state
       (failed process, invalid configuration, ...).
-    * Yellow: the unit is not in the desired state but that may not
-      be an issue (system starting, configuration loading, ...).
+    * Yellow: the unit is not in the desired state but it may be still be
+    * converging to it (system starting, configuration loading, ...).
     * Green: the unit is in the desired state.
-
-  * Status details:
-    * An exact status code for the unit.
-    * A human readable message with the reason for the status.
 
 This format allows to quickly check the overall system and to derive
 aggregate status overviews while keeping the details needed to react

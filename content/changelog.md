@@ -36,46 +36,60 @@ _Topic_: Draft, uncommited and unordered, roadmap.
 - TODO(stefano): Rewrite protobuf documentation in terms of operations
                  (with with detailed sections on message attributes and
                  components interaction).
-- TODO(stefano): Use promeses in `snow-fox-cli` interpreter.
 - TODO(stefano): Upgrade to latest hugo.
-- TODO(stefano): Improve lua C++ interface with C++11/14 feats.
-- TODO(stefano): Rewrite and reorganise configuration with promises.
-- TODO(stefano): Rebuild and generalise build system.
-- TODO(stefano): Rewrite repo interface to be promise based.
 - TODO(stefano): ArangoDB metadata backend.
+- TODO(stefano): Resource (CPU && RAM) tracking.
+- TODO(stefano): Resource (CPU && RAM) allocation spec.
+- TODO(stefano): Resource (CPU && RAM) limit enforcing.
+- TODO(stefano): Additional resource tracking.
 
-0.4.2?
+- TODO(stefano): Look into LUA corutines to suspend execution (implement `include` in config and `wait` in client).
+- TODO(stefano): Improve lua C++ interface with `C++11/14` feats:
+  * Template specialization in stack `to<Type>`.
+  * Reimplement proxy type with functors and lambdas.
+  * Simple lua container for `std::shared_ptr<?>`.
+
+- TODO(stefano): Use promeses in `snow-fox-cli` interpreter.
+- TODO(stefano): Convert node interface to use promises.
+- TODO(stefano): Rewrite repo interface to be promise based.
+
+- TODO(stefano): Storage hints:
+  * Format metadata keys as `namespace:key`.
+  * Store a map from `namespace` to usage hint.
+  * Metadata implementations can use these hints to optimize storage.
+
+- TODO(stefano): Rebuild and generalise build system.
+  * Based on stages (generate files, compile, link, run, analyse, lint, gcovr, lcov).
+  * Based on ninja?
+  * Per-component and global stages (compile vs lcov).
+  * Jenkinfile or equivalent with the CI stages.
+  * Dockerfile in `dev-tools/docker/jenkins` to spin up a jenkins local server?
+
+0.6.1?
 ------
 _Topic_: Cluster membership.
 
 - TODO(stefano): Node (re)join at start.
 - TODO(stefano): Nodes have buddies to check up on their health.
-- TODO(stefano): Buddies detect node departure.
-- TODO(stefano): Forget nodes.
+- TODO(stefano): Primary as a service: nodes can be primary/secondary for a cluster wide task.
+- TODO(stefano): Buddies detect nodes faults.
+- TODO(stefano): Forget nodes (not automatically done).
 
-0.4.1?
-------
-_Topic_: Docs improvement and reorganization.
-
-- TODO(stefano): Look into gitbook.
-- TODO(stefano): Move site to `docs.site`.
-- TODO(stefano): Add gitbook component.
-- TODO(stefano): Create `docs.admin` for end-user docs.
-- TODO(stefano): Create `docs.failures` for failure modes.
-- TODO(stefano): Create `docs.refs` for full references.
-- TOOD(stefano): Create `docs.develop` for development docs.
-- TODO(stefano): Add top level reference menu for detailed docs.
-
-0.4.0?
+0.6.0?
 ------
 _Topic_: Configuration refactoring and context instance.
 
-- TODO(stefano): Create `core.config.node` to introduce specific options.
-- TODO(stefano): Extend node configuration with more components.
+- TODO(stefano): Create `core.config.node` to introduce node options.
+- TODO(stefano): Extend `core.config.base` with `ConfigMultiStep`.
 - TODO(stefano): Change node configuration to new class.
+- TODO(stefano): Config loader stores and builds a `core.state.global` container.
+- TODO(stefano): Update components to match new config format.
 - TODO(stefano): Delete old code.
+- TODO(stefano): Allow configuration of metrics.
+- TODO(stefano): Re-work logging configuration.
+- TODO(stefano): Store promise handler in `core.state.global`.
 
-0.3.0?
+0.5.0?
 ------
 _Topic_: Libevent2, RPC framework and tracing.
 
@@ -89,57 +103,69 @@ _Topic_: Libevent2, RPC framework and tracing.
 - TODO(stefano): Trace service load.
 - TODO(stefano): Trace service start.
 
-0.2.2?
+0.4.0?
 ------
 _Topic_: Introspection with metrics and logs.
 
 - TODO(stefano): Create backends to collect and expose metrics.
-- TODO(stefano): Allow configuration of metrics.
 - TODO(stefano): Count configuration reloads.
 - TODO(stefano): Count errors.
 - TODO(stefano): Gauge pending promeses.
-- TODO(stefano): Move logger instance out of the `Context`.
+- TODO(stefano): Move logger instance out of `Context`.
 - TODO(stefano): Move `ScoperdLogger` out of `Context`.
 - TODO(stefano): Log to fluentd https://github.com/m-mizutani/libfluent
 - TODO(stefano): Process name in the logs (to replace process-group option).
 - TODO(stefano): Multi-logger for stdout/stderr and fluentd.
 
+0.3.0?
+------
+_Topic_: Docs improvement and reorganization.
+
+- TODO(stefano): Move site to `docs.site`.
+- TODO(stefano): Add gitbook component.
+- TODO(stefano): Create `docs.admin` for end-user docs.
+- TODO(stefano): Create `docs.failures` for failure modes.
+- TOOD(stefano): Create `docs.develop` for development docs.
+- TODO(stefano): Add top level reference menu for detailed docs.
+
 0.2.1?
 ------
-_Topic_: Service start/stop/status.
+_Topic_: Service status and stop.
 
+- TODO(stefano): Searchable metadata (with support for simple attribute matchers).
+- TODO(stefano): List services and instances in the register.
 - TODO(stefano): ???
+{{% /draft %}}
 
 0.2.0
 -----
-_Topic_: Service registry.
+_Topic_: Service start and registry.
 
-- TODO(stefano): Define what a service is.
-- TODO(stefano): Define what an instance is.
-- TODO(stefano): Create `core.config.base` for base config environment.
-- TODO(stefano): Config switch from intents to steps.
-- TODO(stefano): Config switch from lifecycles to hooks.
-- TODO(stefano): Config switch to `Promise` returning methods.
-- TODO(stefano): Search metadata (with support for simple attribute matchers).
-- TODO(stefano): Add service and instance to the register.
-- TODO(stefano): List services and instances in the register.
-- TODO(stefano): Reload registry after service node (if needed).
+- TODO(stefano): Start instance client command.
+- TODO(stefano): Start instance server handler.
+- TODO(stefano): Load instance definition.
+- TODO(stefano): Send instance start to spawner.
+- TODO(stefano): Start instance.
+- Define service and service instance.
 
 ### New Features
-- ???
+- Create `core.config.base` for base config environment.
+- Create `core.config.service` to return a `ServiceDescription`.
+- Create `core.state.global` to track singleton intances.
+- Create `core.testing.cluster` for tests.
+- Create `core.testing.static` for tests.
+- Iterate over keys in a LUA table (to be improved).
+- Script to lcov coverage data into HTML.
 
 ### Improvements
-- ???
+- Convert LUA value to JSON.
+- Iterate over string and int `LuaTable` keys.
+- Skip rebuilding external dependencies that are not idempotent.
 
 ### Breaking changes
-- TODO(stefano): Adding metadata search changes the interface.
-
-### Fixes
-- ???
-
-### Others
-- ???
-{{% /draft %}}
+- Move `Node::me()` to `Cluster::myself()`.
+- Move cluster instance out of `Context`.
+- Simplify ColourStatus by removing status code.
 
 0.1.1
 -----
@@ -194,6 +220,7 @@ _Topic_: Events refactoring.
 -----
 _Topic_: Start system configuration.
 
+### New Features
 - Create/Migrate ScheduledSources during reconfig.
 - Git backed repository.
 - Initial configuration loading.
@@ -209,6 +236,7 @@ _Topic_: Start system configuration.
 -----
 _Topic_: First client-server interaction.
 
+### New Features
 - Client introduction.
 - Event contexts.
 - Lua interface to client API.
@@ -222,26 +250,37 @@ _Topic_: First client-server interaction.
 -----
 _Topic_: Start command line client.
 
+### New Features
 - Command line client started.
-- Fixed daemon termination with Ctrl+C in console mode.
-- Fixed undetected client disconnects.
 - LUA utility wrapper classes.
 - Manual event source.
 - Node name from command line.
-- Node name used in event ids.
 - Print binary version and exit.
 - Public protocol started.
 - Scheduled event source.
 - Started cluster interface.
 - Status definition and helpers.
 
+### Improvements
+- Node name used in event ids.
+
+### Fixes
+- Fixed daemon termination with Ctrl+C in console mode.
+- Fixed undetected client disconnects.
+
 0.0.1
 -----
+_Topic_: Event ids.
+
+### New Features
 - Event ids and correlation ids.
 - Improved event handler registration at static initialisation time.
 - Version header file.
 
 0.0.0
 -----
+_Topic_: Core framework.
+
+### New Features
 - Core framework.
 - Process orchestration and daemonisation.

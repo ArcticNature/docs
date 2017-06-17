@@ -52,13 +52,13 @@ Road map
 | ------------------ | -------------------------- | ----------- |
 | 0.1.0              | Events refactoring         | done        |
 | 0.1.1              | Metadata storage           | done        |
-| 0.2.0              | Service registry           | in progress |
-| 0.2.1?             | Service start/stop/status  | pending     |
-| 0.2.2?             | Metrics collection         | pending     |
-| 0.3.0?             | Libevent + RPC framework   | pending     |
-| 0.4.0?             | Config/context refactoring | pending     |
-| 0.4.1?             | Docs improvement           | pending     |
-| 0.4.2?             | Cluster membership         | pending     |
+| 0.2.0              | Service start and registry | in progress |
+| 0.2.1              | Service status and stop    | pending     |
+| 0.3.0?             | Docs improvement           | pending     |
+| 0.4.0?             | Metrics collection         | pending     |
+| 0.5.0?             | Libevent + RPC framework   | pending     |
+| 0.6.0?             | Config/context refactoring | pending     |
+| 0.6.1?             | Cluster membership         | pending     |
 | ??????             | TCP connection support     | pending     |
 | ??????             | Client connects over tcp   | pending     |
 | ??????             | Cluster support            | pending     |
